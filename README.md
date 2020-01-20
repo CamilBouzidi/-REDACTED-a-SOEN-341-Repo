@@ -7,3 +7,5 @@ This is the repository for [REDACTED], our SOEN 341 group project.
 * [Judy Mezaber](https://github.com/jmezaber)
 * [Laurent Lao](https://github.com/laurentlaurent/)
 * [Tommy Josépovic](https://github.com/tommy-josepovic)
+
+## User Stories
