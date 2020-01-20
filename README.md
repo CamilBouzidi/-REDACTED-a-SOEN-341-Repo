@@ -21,4 +21,8 @@ This project is a school assignment for the SOEN 341 class meant to result in a 
 
 ## Languages and Techniques
 
+### Languages
 This project could benefit from having a HTML, CSS, Javascript front-end and a C#/.NET back-end to leverage existing work-experience from project members.
+
+### Techniques
+TBD
