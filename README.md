@@ -13,6 +13,7 @@ This is the repository for [REDACTED], our SOEN 341 group project.
 This project is a school assignment for the SOEN 341 class meant to result in a working Instagram-like program.
 
 ## Features
+[Also available as User Stories](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/wiki/User-Stories)
 * User accounts
 * User can post pictures
 * User can comment on pictures posted
