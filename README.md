@@ -1,4 +1,4 @@
-# -ShutterFeed-a-SOEN-341-Repo
+# ShutterFeed: a SOEN 341 Repo
 This is the repository for ShutterFeed, our SOEN 341 group project.
 
 ## Members
