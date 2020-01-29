@@ -1,5 +1,5 @@
-# -REDACTED-a-SOEN-341-Repo
-This is the repository for [REDACTED], our SOEN 341 group project.
+# -ShutterFeed-a-SOEN-341-Repo
+This is the repository for ShutterFeed, our SOEN 341 group project.
 
 ## Members
 * [Alexander Robitaille](https://github.com/A-Robitaille)
