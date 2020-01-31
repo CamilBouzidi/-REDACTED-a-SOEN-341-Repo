@@ -10,7 +10,7 @@ This is the repository for ShutterFeed, our SOEN 341 group project.
 
 ## Description
 
-This project is a school assignment for the SOEN 341 class meant to result in a working Instagram-like program.
+ShutterFeed is a school assignment for the SOEN 341 class meant to result in a working Instagram-like program.
 
 ## Core Features
 [Also available as User Stories](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/wiki/User-Stories)
