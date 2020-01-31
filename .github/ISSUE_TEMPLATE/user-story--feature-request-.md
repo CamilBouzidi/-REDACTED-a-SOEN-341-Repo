@@ -1,11 +1,10 @@
 ---
-Name: User Story (Feature Request)
-About: Suggest an idea for this project in the form of a User Story
-Title: 'User Story #'
-Labels: documentation, user story
-Assignees: ''
-Priority: ''
-Story points: ''
+name: User Story (Feature Request)
+about: Suggest an idea for this project in the form of a User Story
+title: 'User Story #'
+labels: documentation, user story
+assignees: ''
+
 ---
 
 **Please name a feature that would enhance the user's experience from the first-person point of view.**
@@ -18,6 +17,3 @@ Doing so will help us create epics more easily.
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
-
-**Acceptance Test**
-Describe a test to verify implementation
