@@ -32,8 +32,8 @@ Note: The priority and story point value will be evaluated as a group.
   </tr>
   <tr>
     <td>Acceptance Test</td>
-    <td><a href=" " title="Priority">P</a></td>
-    <td><a href=" " title="Story Point">SP</a></td>
+   <td><span title="Priority">P</span></td>
+   <td><span title="Story Point">SP</span></td>
   </tr>
   <tr>
     <td><!--ACCEPTANCE TEST--></td>
