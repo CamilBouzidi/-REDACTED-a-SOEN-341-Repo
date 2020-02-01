@@ -60,8 +60,10 @@ Start of Markdown Section
 - [ ] Task 1 (Add link to issue number if needed)
 - [ ] Task 2 (@ people assigned to the task)-->
 
+- [ ] Define Acceptance test
 - [ ] Assign Story Point Value
 - [ ] Assign Priority Number
+- [ ] Define tasks
 - [ ] Verify issue completion with Acceptance Test. Done!
 
 **Additional context**
