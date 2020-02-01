@@ -36,9 +36,16 @@ Note: The priority and story point value will be evaluated as a group.
    <td><span title="Story Point">SP</span></td>
   </tr>
   <tr>
-    <td><!--ACCEPTANCE TEST--></td>
-    <td><!--PRIORITY-NUMBER--></td>
-    <td><!--STORY-POINT-VALUE--></td>
+    <td>
+        <ol>
+            <!--LIST ACCEPTANCE TEST-->
+            <li>An Acceptance test</li>
+        </ol>
+    </td>
+    <!--PRIORITY-NUMBER-->
+    <td><!--ENTER-PRIORITY-NUMBER--></td>
+    <!--STORY-POINT-VALUE-->
+    <td><!--ENTER-STORY-POINT-VALUE--></td>
   </tr>
   <tr>
     <td colspan="3">DESCRIPTION-PLACEHOLDER</td>
