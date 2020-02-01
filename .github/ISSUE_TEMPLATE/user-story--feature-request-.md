@@ -67,5 +67,5 @@ Start of Markdown Section
 * Related feature [#A]
 * Related issue number [#B]-->
 
-**Additional context**
+## Additional context
 Add any other context or screenshots about the feature request here.
