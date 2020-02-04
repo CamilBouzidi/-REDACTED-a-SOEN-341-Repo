@@ -1,5 +1,5 @@
 * [Wiki Home](Home)
 
-* [About this Project](about)
+* [About this Project](About)
 
 * [Github Workflow](Github-Workflow)

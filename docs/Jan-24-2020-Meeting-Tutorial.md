@@ -10,11 +10,11 @@ After Meeting with TA:
 * Get rid of Front End and Back End folders.
 * .NET CORE seems ideal to use with VS Code, especially because of extensions NuGet is a great tool.
 * Recommended VS Code extensions:
-* Nuget Package Manager Console
-* Webpack extension
-* Microsoft.DotNet.Watcher.Tools
-* Add Node.js to our PCs
-* Install .NET Core 3.1 SDK
-•	Get familiar with Webpack for FE
-•	So far, name is PhotoFeed. Please let us know if you have any other ideas!
+    * Nuget Package Manager Console
+    * Webpack extension
+    * Microsoft.DotNet.Watcher.Tools
+    * Add Node.js to our PCs
+    * Install .NET Core 3.1 SDK
+    *	Get familiar with Webpack for FE
+    *	So far, name is PhotoFeed. Please let us know if you have any other ideas!
 
