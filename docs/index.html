@@ -12,8 +12,14 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      alias: {
+        '/': 'Home.md',
+        '/About': 'https://raw.githubusercontent.com/CamilBouzidi/-ShutterFeed-a-SOEN-341-Repo/master/README.md'
+      },
+      homepage: 'Home.md',
+      name: 'ShutterFeed Docs',
+      repo: 'https://github.com/CamilBouzidi/-ShutterFeed-a-SOEN-341-Repo',
+      loadSidebar: '_Sidebar.md'
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>

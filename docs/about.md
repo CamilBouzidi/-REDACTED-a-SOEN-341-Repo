@@ -1,0 +1,1 @@
+[Page Redirect](https://raw.githubusercontent.com/CamilBouzidi/-ShutterFeed-a-SOEN-341-Repo/master/README.md)

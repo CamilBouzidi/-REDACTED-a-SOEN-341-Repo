@@ -1,0 +1,1 @@
+Our TA time slot is Friday 12:15 PM in MB S2.401 SGW
