@@ -1,0 +1,16 @@
+•	Pull requests to develop branch instead of master. Save Master for stable things
+•	Or not because of continuous integration
+•	Or make a branch for the sprint and then merge to master at the end of the sprint
+•	Pull request created for read me, needs to be merged
+•	Pull request for webpack coming soon
+•	Webpack can do cool stuff, but we are trying to keep it simple
+o	Also easy to integrate frameworks
+•	IDE choice: VS code or Rider :
+o	Rider : Once we upload project, it syncs settings to make stuff easier
+o	Plugin for Webpack in Rider
+•	Azure cloud as a possible host
+•	Have high level design meeting next week
+•	Processes: Tag issues properly: Issue = Story, Milestone = Sprint, Global backlog = Unassigned and no milestone, Sprint backlog = Unassigned and has a milestone
+•	Wiki pages have been added: Git commands and other things that should be read
+•	Continuous integrating tool needs to be added
+•	To make it easier to know who knows how to do what: We each create a wiki page and list what kind of programming or other relevant experience we have. Internships, projects and classes.
