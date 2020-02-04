@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p=".github" t="Include">
+        <e p="ISSUE_TEMPLATE" t="Include">
+          <e p="user-story--feature-request-.md" t="Include" />
+        </e>
+      </e>
       <e p=".gitignore" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
@@ -71,6 +76,11 @@
       <e p="Controllers" t="Include">
         <e p="WeatherForecastController.cs" t="Include" />
       </e>
+      <e p="docs" t="Include">
+        <e p=".nojekyll" t="Include" />
+        <e p="index.html" t="Include" />
+        <e p="README.md" t="Include" />
+      </e>
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
@@ -89,6 +99,7 @@
       <e p="Properties" t="Include">
         <e p="launchSettings.json" t="Include" />
       </e>
+      <e p="README.md" t="Include" />
       <e p="ShutterFeed.csproj" t="IncludeRecursive" />
       <e p="ShutterFeed.sln" t="IncludeFlat" />
       <e p="Startup.cs" t="Include" />
