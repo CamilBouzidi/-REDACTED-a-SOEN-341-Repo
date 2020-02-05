@@ -38,16 +38,17 @@ Note: The priority and story point value will be evaluated as a group.
   <tr>
     <td>
         <ol>
-            <!--LIST ACCEPTANCE TEST-->
+<!--~~~~~ LIST ACCEPTANCE TEST ~~~~~-->
             <li>An Acceptance test</li>
         </ol>
     </td>
-    <!--PRIORITY-NUMBER-->
-    <td><!--ENTER-PRIORITY-NUMBER--></td>
-    <!--STORY-POINT-VALUE-->
-    <td><!--ENTER-STORY-POINT-VALUE--></td>
+<!--~~~~~ ENTER-PRIORITY-NUMBER ~~~~~-->
+    <td>#P</td>
+<!--~~~~~ ENTER-STORY-POINT-VALUE ~~~~~-->
+    <td>#SP</td>
   </tr>
   <tr>
+<!--~~~~~ UPDATE-DESCRIPTION ~~~~~ -->
     <td colspan="3">DESCRIPTION-PLACEHOLDER</td>
   </tr>
 </table>
@@ -58,9 +59,11 @@ Start of Markdown Section
 
 ## Task list
 
-<!-- Use checkboxes like this:
+<!--~~~~HELPER~~~~~
+Use checkboxes like this:
 - [ ] Task 1 (Add link to issue number if needed)
-- [ ] Task 2 (@ people assigned to the task)-->
+- [ ] Task 2 (@ people assigned to the task
+~~~~~~~~~~~~~~~~~~~~-->
 
 - [ ] Define Acceptance test
 - [ ] Assign Story Point Value
@@ -70,9 +73,11 @@ Start of Markdown Section
 
 ## Related features/user stories
 
-<!-- Use bullet points like this:
+<!--~~~~HELPER~~~~~
+Use bullet points like this:
 * Related feature [#A]
-* Related issue number [#B]-->
+* Related issue number [#B]
+~~~~~~~~~~~~~~~~~~~~-->
 
 ## Additional context
 Add any other context or screenshots about the feature request here.
