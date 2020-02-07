@@ -6,4 +6,6 @@ This page lists the meeting minutes
 
 * [Jan 29 2020](Jan-29-2020)
 
-* [Jan 31 2010](Jan-31-2020)
+* [Jan 31 2020](Jan-31-2020)
+
+* [Feb 5 2020](Feb-5-2020)
