@@ -1,4 +1,7 @@
 # ShutterFeed: a SOEN 341 Repo
+
+See our [Docsify Wiki](https://docs-shutterfeed.now.sh) hosted on Zeit.
+
 This is the repository for ShutterFeed, our SOEN 341 group project.
 
 ## Members
