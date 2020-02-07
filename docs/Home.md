@@ -8,6 +8,8 @@ If you're coming from the Github wiki, see our [Docsify page](https://docs-shutt
 
 ### Useful Information
 
+[Issues workflow](Github-Workflow#issues-workflow)
+
 [Github Workflow](Github-Workflow)
 
 [TA Time Slot](TA-Time-Slot)
