@@ -9,3 +9,5 @@ This page lists the meeting minutes
 * [Jan 31 2020](Jan-31-2020)
 
 * [Feb 5 2020](Feb-5-2020)
+
+* [Feb 7 2020](Feb-7-2020-Meeting-Tutorial)
