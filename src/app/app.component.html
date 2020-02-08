@@ -1,3 +1,7 @@
+<h1>{{title}}</h1>
+<!-- Needs Router-outlet for Router to change page-->
+<router-outlet></router-outlet>
+
 <ul>
   <li class="text" *ngFor="let item of items | async">
     {{item.name}}
