@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "shutterfeed-soen341": {
+      "hosting": {
+        "ShutterFeed": [
+          "shutterfeed-soen341"
+        ]
+      }
+    }
+  }
+}
