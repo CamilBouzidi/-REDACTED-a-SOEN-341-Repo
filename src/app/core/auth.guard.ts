@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
 
     return this.auth.user.pipe(
       take(1),
-      map(user => !!user),
+      map(user => !!user), // <-- map to boolean
       tap (
         loggedIn => {
         if (!loggedIn) {
@@ -29,6 +29,7 @@ export class AuthGuard implements CanActivate {
         }
       }));
   }
+    // This was the default guard (kept for completeness)
     /* state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return true;
     }*/

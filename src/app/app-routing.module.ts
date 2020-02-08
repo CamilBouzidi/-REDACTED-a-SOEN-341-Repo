@@ -6,7 +6,7 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 const routes: Routes = [
   // Add routes here
   // For auth guard: { path: 'notes', component: NotesListComponent,  canActivate: [AuthGuard] },
-  { path: 'login', component: UserProfileComponent},
+  { path: 'user-profile', component: UserProfileComponent},
 ];
 
 @NgModule({
