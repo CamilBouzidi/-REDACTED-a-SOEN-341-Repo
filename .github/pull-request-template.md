@@ -4,7 +4,14 @@ This PR does...
 
 ## Related Issue
 
-* Resolve/Close/Fix [#xx] Issue
+<!-- 
+If the Pull request closes/fixes/resolves an issue
+Use Resolves #xx or Closes #xx or Fixes #xx instead
+WITHOUT ANY BRACKETS (It won't work if there are
+brackets)
+-->
+
+*  Issue [#xx]
 
 ## Testing 
 
