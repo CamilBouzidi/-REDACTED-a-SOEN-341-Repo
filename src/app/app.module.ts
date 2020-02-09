@@ -11,6 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PageLandingComponent } from './page-landing/page-landing.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/* Material imports */
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,8 @@ import { PageLandingComponent } from './page-landing/page-landing.component';
     AngularFirestoreModule,
     CoreModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
