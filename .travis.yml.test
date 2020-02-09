@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '13.8'
+before_script:
+- npm install -g @angular/cli
+script:
+- npm install
+- npm run build
+jobs:
+  include:
+    -if: branch=master
+    deploy:
+      skip_cleanup: true
+      provider: firebase
+      token:
+        secure: k2VugCURILabTcO49dihOymnvf7knYyrnEidAPxTndmx7Qg1CUN3QBYilWynhKL/oOWAa3RS+xAsop0leskKmMfP95jiFaLcXB4L/b5miPAQBlBUiu+uyDCQFreHM2rrB5RynQKQER8j2R+/wHHHHSSdSFOQjGKjAp0xGPrOuJLo+8AGsg6fGS1mclMHqpEqqj5WXv2AfnOGYKtN9SH0oSIxFth+p4wR9hHU7APDzhLf5fZBmbMfmaKZzybTRNr/lB00Coqr2DbvZdN4QKQh4S98zgsnK8y7qDafzt1sBY3FYl9QKlUrsYf9q8EKtPiVCqskSr9C4Rd78VJ0uZmv2ErXmxbYvVITKtfY0sHczU7RevQp7byTSMeh3RWtWauB7bJjRkTG/j36TAkY7vTfs86C3oA62v3+VqVDX5X2ne4DN4Ur+G7H8GbNg9SOh2GNtoYyREiceqs5A5vRcKj+hlAM8co6E4G1S7KY7v4gU0CpMTJwaHB+kg0pno4OWWsVTJZP3QYS08WFHko+O/qVAmR9dq+xok20kU01NjAoDl6butCcH93jzg3hTGs+7eeTNJMKYcBpqQzLuvDUVdHTFK65b7sPOoM0HxXfHczE/vVuV5k4B0jzt342zgDYIBz8Pb1XRwPrMofLsxNFIat9XQgtuusJmMTzevKWGhJKumQ=
+env:
+  global:
+    secure: k2VugCURILabTcO49dihOymnvf7knYyrnEidAPxTndmx7Qg1CUN3QBYilWynhKL/oOWAa3RS+xAsop0leskKmMfP95jiFaLcXB4L/b5miPAQBlBUiu+uyDCQFreHM2rrB5RynQKQER8j2R+/wHHHHSSdSFOQjGKjAp0xGPrOuJLo+8AGsg6fGS1mclMHqpEqqj5WXv2AfnOGYKtN9SH0oSIxFth+p4wR9hHU7APDzhLf5fZBmbMfmaKZzybTRNr/lB00Coqr2DbvZdN4QKQh4S98zgsnK8y7qDafzt1sBY3FYl9QKlUrsYf9q8EKtPiVCqskSr9C4Rd78VJ0uZmv2ErXmxbYvVITKtfY0sHczU7RevQp7byTSMeh3RWtWauB7bJjRkTG/j36TAkY7vTfs86C3oA62v3+VqVDX5X2ne4DN4Ur+G7H8GbNg9SOh2GNtoYyREiceqs5A5vRcKj+hlAM8co6E4G1S7KY7v4gU0CpMTJwaHB+kg0pno4OWWsVTJZP3QYS08WFHko+O/qVAmR9dq+xok20kU01NjAoDl6butCcH93jzg3hTGs+7eeTNJMKYcBpqQzLuvDUVdHTFK65b7sPOoM0HxXfHczE/vVuV5k4B0jzt342zgDYIBz8Pb1XRwPrMofLsxNFIat9XQgtuusJmMTzevKWGhJKumQ=
