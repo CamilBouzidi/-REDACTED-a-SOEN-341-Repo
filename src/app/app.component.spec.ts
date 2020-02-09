@@ -1,8 +1,11 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => { return true;
-/*  beforeEach(async(() => {
+// Since the constructor of AppComponent takes an argument, no default testing
+
+/*
+describe('AppComponent', () => {
+    beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
@@ -27,5 +30,7 @@ describe('AppComponent', () => { return true;
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('ShutterFeed app is running!');
-  }); */
+  });
 });
+*/
+
