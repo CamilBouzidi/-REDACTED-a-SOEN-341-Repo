@@ -23,7 +23,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PageLandingComponent } from './page-landing/page-landing.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewPostComponent } from './new-post/new-post.component';
-import { NewPostDialog } from './new-post/new-post-dialog/new-post-dialog.component';
+import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { NewPostDialog } from './new-post/new-post-dialog/new-post-dialog.compon
     PageNotFoundComponent,
     PageLandingComponent,
     NewPostComponent,
-    NewPostDialog
+    NewPostDialogComponent
   ],
   imports: [
     BrowserModule,

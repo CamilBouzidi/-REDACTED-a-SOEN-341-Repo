@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { NewPostDialog } from './new-post-dialog/new-post-dialog.component';
+import { NewPostDialogComponent } from './new-post-dialog/new-post-dialog.component';
 
 @Component({
   selector: 'app-new-post',
@@ -9,10 +9,10 @@ import { NewPostDialog } from './new-post-dialog/new-post-dialog.component';
 })
 export class NewPostComponent {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) { }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(NewPostDialog, { width: '700px' });
+    const dialogRef = this.dialog.open(NewPostDialogComponent, { width: '700px' });
     dialogRef.disableClose = true;
   }
 }
