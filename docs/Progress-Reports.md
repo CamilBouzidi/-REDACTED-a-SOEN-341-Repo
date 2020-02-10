@@ -3,20 +3,6 @@
 <!-- Progress Reports details -->
 <!-- Should be ordered from most recent to oldest -->
 
-## Feb 10 2020
-
-Progress report:
-
-* Travis added to repo (Camil)
-
-* Travis config file fixed (Laurent)
-
-* Travis checks for `ng lint` and `ng test` errors (Laurent)
-
-* Minimal `specs.ts` tests included for some components (Laurent)
-
-* Draw.io link added (Judy)
-
 ## Feb 9 2020
 
 Progress report:
