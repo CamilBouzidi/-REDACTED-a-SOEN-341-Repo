@@ -1,6 +1,5 @@
 # ShutterFeed: a SOEN 341 Repo
 
-
 See our [Docsify Wiki](https://docs-shutterfeed.now.sh) hosted on Zeit.
 
 See the [ShutterFeed Web App](https://shutterfeed-soen341.web.app) deployed on Firebase.
