@@ -1,0 +1,29 @@
+<div class="dialog-wrapper">
+  <button class="close-icon" mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <h2 mat-dialog-title>New post </h2>
+
+  <mat-dialog-content>
+    <button *ngIf="!image" class="choose-image-btn" mat-button (click)="imageInput.click()">
+      <mat-icon>insert_photo</mat-icon> Choose image
+    </button>
+    <input #imageInput type="file" accept="image/png, image/jpg, image/jpeg" style="display: none;"
+      (change)="handleImageInput(imageInput)">
+
+    <div class="image-wrapper" *ngIf="image">
+      <img class="image-preview" [src]="image">
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <mat-form-field class="caption-field">
+      <textarea [(ngModel)]="caption" matInput maxlength="256" placeholder="Caption" rows="1"></textarea>
+      <mat-hint align="end">{{ caption ? caption.length : 0 }} / 256</mat-hint>
+    </mat-form-field>
+
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button (click)="uploadImage()" [disabled]="!image" color="primary">Share</button>
+  </mat-dialog-actions>
+</div>
