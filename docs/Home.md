@@ -1,4 +1,4 @@
-**Welcome to the Shutterfly: a SOEN 341 Repo wiki!**
+# Welcome to the Shutterfly: a SOEN 341 Repo wiki!
 
 If you're coming from the Github wiki, see our [Docsify page](https://docs-shutterfeed.now.sh)
 
@@ -8,7 +8,7 @@ If you're coming from the Github wiki, see our [Docsify page](https://docs-shutt
 
 [User Stories](User-Stories)
 
-### Useful Information
+## Useful Information
 
 [Issues workflow](Github-Workflow#issues-workflow)
 
