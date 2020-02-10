@@ -1,5 +1,3 @@
-# Sidebar
-
 * [Wiki Home](Home)
 
 * [About this Project](About)
