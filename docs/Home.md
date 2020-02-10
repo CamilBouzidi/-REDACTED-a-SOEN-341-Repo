@@ -2,7 +2,7 @@
 
 If you're coming from the Github wiki, see our [Docsify page](https://docs-shutterfeed.now.sh)
 
-[[Project Documentation]](Project-Documentation)
+[Project Documentation](Project-Documentation)
 
 [Meeting Minutes](Meeting-Minutes)
 
