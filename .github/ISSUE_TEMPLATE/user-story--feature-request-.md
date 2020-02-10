@@ -22,7 +22,7 @@ assignees: ''
 <!-- Choose the type: User Story or Task. Don't worry if the pipes don't line up-->
 
 | User Story/Task        | P | SP |
-|------------------------|:-:|:--:|
+|:-----------------------|:-:|:--:|
 | Name                   | P | SP |
 
 <!-- Write a Description Below -->
