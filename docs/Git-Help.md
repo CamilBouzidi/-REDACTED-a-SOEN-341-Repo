@@ -1,8 +1,8 @@
 Some tips when using Git
 
-# Commonly used bash commands for Git
+# Git Guide and commonly used commands
 
-See [Git-commands](https://github.com/joshnh/Git-Commands)
+See [Git-commands](https://github.com/laurentlaurent/Git-Help)
 
 # Writing good Git Commit Messages
 
