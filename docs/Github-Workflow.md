@@ -1,14 +1,16 @@
+# Github Workflow
+
 _See also [Git help](Git-Help) and [Wiki help](Wiki-Help)_
 
 This page will serve as a guide to produce a streamlined process for the use of Github's features.
 
-# Using Github with Agile Methodology
+## Using Github with Agile Methodology
 
 See this article: [GitHub Issues Can be Agile if You Do it Right](https://zube.io/blog/agile-project-management-workflow-for-github-issues/)
 
-# Issues Workflow
+## Issues Workflow
 
-## Choose a template
+### Choose a template
 
 To ensure uniformity and that we don't forget anything, we should use a template to create an issue.
 
@@ -18,15 +20,15 @@ Available templates:
   
   * For Issues relating to User Stories (it can also be slightly modified to also be for tasks)
 
-## Choose a label
+### Choose a label
 
 To ensure that we can easily understand the type of the issue from the Issue Page, label the issue accordingly.
 
-## (Optional) Choose a milestone
+### (Optional) Choose a milestone
 
 Milestones do not have to be set immediately.
 
-## (Optional) Assign to the project board
+### (Optional) Assign to the project board
 
 If the issue has to be worked on for the on-going sprint, then it should be added to the Project Board.
 
@@ -64,6 +66,6 @@ Available cards list in the Project Board
 
   * The card is automatically moved there when a pull request containining the github magic words to automatically close issues is used and it is merged. You can also automatically move the cards there by closing the issue. (You should not move the cards manually there. **Close the issue instead**).
 
-## (Optional) Assign people
+### (Optional) Assign people
 
 Assigning people notifies them of progress and ensures that workload is balanced.

@@ -2,6 +2,8 @@
 
 See our [Docsify Wiki](https://docs-shutterfeed.now.sh) hosted on Zeit.
 
+See the [ShutterFeed Web App](https://shutterfeed-soen341.web.app) deployed on Firebase.
+
 This is the repository for ShutterFeed, our SOEN 341 group project.
 
 ## Members
