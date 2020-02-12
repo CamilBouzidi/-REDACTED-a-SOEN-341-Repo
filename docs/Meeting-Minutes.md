@@ -11,3 +11,5 @@ This page lists the meeting minutes
 * [Feb 5 2020](Feb-5-2020)
 
 * [Feb 7 2020](Feb-7-2020-Meeting-Tutorial)
+
+* [Feb 12 2020](Feb-12-2020-Meeting-Minutes.md)
