@@ -3,10 +3,13 @@
 <router-outlet></router-outlet>
 
 <ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.name}}
+  <li class="text" *ngFor="let post of posts | async" (click)="output(post)">
+    {{post.id}}
   </li>
 </ul>
-<button mat-raised-button>This is a mat button!</button>
 
 <app-new-post></app-new-post>
+
+<div style="max-width: 600px; margin: 30px auto;">
+  <app-create-comment></app-create-comment>
+</div>

@@ -24,6 +24,8 @@ import { PageLandingComponent } from './page-landing/page-landing.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewPostComponent } from './new-post/new-post.component';
 import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dialog.component';
+import { CreateCommentComponent } from './comments/create-comment/create-comment.component';
+import { CommentComponent } from './comments/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dial
     PageNotFoundComponent,
     PageLandingComponent,
     NewPostComponent,
-    NewPostDialogComponent
+    NewPostDialogComponent,
+    CreateCommentComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
