@@ -23,6 +23,6 @@ export class FeedComponent {
         const id = postMetadata.payload.doc.id;
         return { id, ...data };
       }))
-    )
+    );
   }
 }
