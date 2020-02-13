@@ -1,12 +1,12 @@
 <div class="comment-form">
   <mat-form-field class="comment-field">
     <textarea matInput #textarea
-        [(ngModel)]="comment" 
-        class="comment-textarea" 
-        placeholder="Add a comment..." 
+        [(ngModel)]="comment"
+        class="comment-textarea"
+        placeholder="Add a comment..."
         rows="1" 
         (input)="resizeTextarea(textarea)"></textarea>
   </mat-form-field>
 
-  <button mat-button (click)="submitComment()">Submit</button>
+  <button mat-button (click)="submitComment()" [disabled]="uploading">Submit</button>
 </div>

@@ -38,13 +38,10 @@ import { FeedCardComponent } from './feed/feed-card/feed-card.component';
     PageLandingComponent,
     NewPostComponent,
     NewPostDialogComponent,
-<<<<<<< HEAD
     CreateCommentComponent,
-    CommentComponent
-=======
+    CommentComponent,
     FeedComponent,
     FeedCardComponent
->>>>>>> 73-picture-feed
   ],
   imports: [
     BrowserModule,

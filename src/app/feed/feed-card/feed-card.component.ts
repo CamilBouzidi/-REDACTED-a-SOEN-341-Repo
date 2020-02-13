@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,11 +11,13 @@ import { Observable } from 'rxjs';
 export class FeedCardComponent implements OnInit {
   @Input() data: any;
   imageUrl: Observable<string>;
+  comments: Observable<any[]>;
 
-  constructor(private storage: AngularFireStorage) { }
+  constructor(private storage: AngularFireStorage, private afs: AngularFirestore) { }
 
   ngOnInit(): void {
-    const ref = this.storage.ref(this.data.imageUrl);
-    this.imageUrl = ref.getDownloadURL();
+    this.imageUrl = this.storage.ref(this.data.imageUrl).getDownloadURL();
+    this.comments = this.afs.collection(`posts/${this.data.id}/comments`).valueChanges();
   }
+
 }
