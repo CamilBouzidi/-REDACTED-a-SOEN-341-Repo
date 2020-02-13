@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -26,6 +27,8 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dialog.component';
 import { CreateCommentComponent } from './comments/create-comment/create-comment.component';
 import { CommentComponent } from './comments/comment/comment.component';
+import { FeedComponent } from './feed/feed.component';
+import { FeedCardComponent } from './feed/feed-card/feed-card.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +38,13 @@ import { CommentComponent } from './comments/comment/comment.component';
     PageLandingComponent,
     NewPostComponent,
     NewPostDialogComponent,
+<<<<<<< HEAD
     CreateCommentComponent,
     CommentComponent
+=======
+    FeedComponent,
+    FeedCardComponent
+>>>>>>> 73-picture-feed
   ],
   imports: [
     BrowserModule,
@@ -55,7 +63,8 @@ import { CommentComponent } from './comments/comment/comment.component';
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
