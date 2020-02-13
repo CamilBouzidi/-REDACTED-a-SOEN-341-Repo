@@ -8,14 +8,6 @@ import { AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firesto
 import { Observable, of } from 'rxjs';
 import { switchMap} from 'rxjs/operators';
 
-interface  User {
-  uid: string;
-  email: string;
-  photoURL?: string;
-  displayName?: string;
-  favoriteColor?: string;
-}
-
 @Injectable({
   providedIn: 'root'
 })
