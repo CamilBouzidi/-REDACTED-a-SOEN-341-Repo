@@ -1,69 +1,87 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { User } from './user.model';
-
-import { auth } from 'firebase/app';
+import 'rxjs/add/operator/toPromise';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
+import * as firebase from 'firebase/app';
 
-import { Observable, of } from 'rxjs';
-import { switchMap} from 'rxjs/operators';
-
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AuthService {
 
-  user$: Observable<User>;
-
   constructor(
-    private afAuth: AngularFireAuth,
-    private afs: AngularFirestore,
-    private router: Router
-  ) {
+      public afAuth: AngularFireAuth
+  ) {}
 
-    // Get auth data, then get firestore user document or return null
-    this.user$ = this.afAuth.authState.pipe(
-      switchMap(user => {
-        if (user) {
-          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
-        } else {
-          return of(null);
-        }
-      })
-    );
+  doGoogleLogin() {
+    return new Promise<any>((resolve, reject) => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      provider.addScope('profile');
+      provider.addScope('email');
+      this.afAuth
+          .signInWithPopup(provider)
+          .then(res => {
+            resolve(res);
+          }, err => {
+            console.log(err);
+            reject(err);
+          });
+    });
   }
 
-  async googleSignIn() {
-    const provider = new auth.GoogleAuthProvider();
-    const credential = await this.afAuth.signInWithPopup(provider);
-    return this.updateUserData(credential.user);
+  doLogout() {
+    return new Promise((resolve, reject) => {
+      if (firebase.auth().currentUser) {
+        this.afAuth.signOut();
+        resolve();
+      } else {
+        reject();
+      }
+    });
+  }
+  // Other Login methods
+
+  doFacebookLogin() {
+    return new Promise<any>((resolve, reject) => {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      this.afAuth
+          .signInWithPopup(provider)
+          .then(res => {
+            resolve(res);
+          }, err => {
+            console.log(err);
+            reject(err);
+          });
+    });
   }
 
-  private updateUserData(user) {
-    // Sets user data to firestore on login
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
-
-    const data = {
-      uid: user.uid,
-      email: user.mail,
-      displayName: user.displayName,
-      photoURL: user.photoURL
-    };
-
-    return userRef.set(data, { merge: true});
+  doTwitterLogin() {
+    return new Promise<any>((resolve, reject) => {
+      const provider = new firebase.auth.TwitterAuthProvider();
+      this.afAuth
+          .signInWithPopup(provider)
+          .then(res => {
+            resolve(res);
+          }, err => {
+            console.log(err);
+            reject(err);
+          });
+    });
   }
 
-  async signOut() {
-    await this.afAuth.signOut();
-    await this.router.navigate(['/']);
+  doRegister(value) {
+    return new Promise<any>((resolve, reject) => {
+      firebase.auth().createUserWithEmailAndPassword(value.email, value.password)
+          .then(res => {
+            resolve(res);
+          }, err => reject(err));
+    });
   }
 
-  private oAuthLogin(provider) {
-    return this.afAuth.signInWithPopup(provider).then( // unsure if this is proper
-        (credential) => {
-          this.updateUserData(credential.user);
-        }
-    );
+  doLogin(value) {
+    return new Promise<any>((resolve, reject) => {
+      firebase.auth().signInWithEmailAndPassword(value.email, value.password)
+          .then(res => {
+            resolve(res);
+          }, err => reject(err));
+    });
   }
+
 }

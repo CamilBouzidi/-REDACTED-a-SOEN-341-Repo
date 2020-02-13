@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import { environment } from '../environments/environment';
 
 /* Firebase imports */
 import { AngularFireModule} from '@angular/fire';
-import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
 /* Material */
@@ -19,10 +22,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 /* Other imports */
 import { AppComponent } from './app.component';
+// User Login
 import { CoreModule } from './core/core.module';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserComponent } from './user/user.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PageLandingComponent } from './page-landing/page-landing.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,17 +36,20 @@ import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dial
 @NgModule({
   declarations: [
     AppComponent,
-    UserProfileComponent,
+    UserComponent,
+    LoginComponent,
+    RegisterComponent,
     PageNotFoundComponent,
     PageLandingComponent,
     NewPostComponent,
-    NewPostDialogComponent
+    NewPostDialogComponent,
   ],
   imports: [
     BrowserModule,
     CoreModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
 
     /* Firebase */
     AngularFireModule.initializeApp(environment.firebaseConfig),

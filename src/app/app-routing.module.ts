@@ -1,19 +1,23 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CommonModule} from '@angular/common';
-import {UserProfileComponent} from './user-profile/user-profile.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+
+import {UserComponent} from './user/user.component';
+import { LoginComponent} from './login/login.component';
+import { RegisterComponent} from './register/register.component';
+import { UserResolver} from './user/user.resolver';
+import { AuthGuard } from './core/auth.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import {AppComponent} from './app.component';
+import {AuthService} from './core/auth.service';
+import {UserService} from './core/user.service';
 
 const routes: Routes = [
-  // Add routes here
-  // For auth guard: { path: 'notes', component: NotesListComponent,  canActivate: [AuthGuard] },
-  {path: 'user-profile', component: UserProfileComponent},
-  // {path: 'landing', component: PageLandingComponent},
-  {path: '404', component: PageNotFoundComponent},
-  // Redirects
-  // {path: '**', redirectTo: '/404'}
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+  { path: 'register', component: RegisterComponent, canActivate: [AuthGuard] },
+  { path: 'user', component: UserComponent,  resolve: { data: UserResolver}}
 ];
 
 @NgModule({
@@ -22,6 +26,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes),
   ],
+  providers: [AuthService, UserService, UserResolver, AuthGuard],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
