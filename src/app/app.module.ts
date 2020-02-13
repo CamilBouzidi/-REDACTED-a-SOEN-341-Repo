@@ -32,6 +32,8 @@ import { PageLandingComponent } from './page-landing/page-landing.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewPostComponent } from './new-post/new-post.component';
 import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dialog.component';
+import { LoginButtonComponent } from './login-button/login-button.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dial
     PageLandingComponent,
     NewPostComponent,
     NewPostDialogComponent,
+    LoginButtonComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

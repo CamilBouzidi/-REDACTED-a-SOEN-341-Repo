@@ -12,9 +12,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import {AppComponent} from './app.component';
 import {AuthService} from './core/auth.service';
 import {UserService} from './core/user.service';
+import {HomePageComponent} from './home-page/home-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', component: HomePageComponent },
   { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent, canActivate: [AuthGuard] },
   { path: 'user', component: UserComponent,  resolve: { data: UserResolver}}
