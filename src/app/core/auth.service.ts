@@ -14,7 +14,7 @@ import { switchMap} from 'rxjs/operators';
 })
 export class AuthService {
 
-  user: Observable<User>;
+  user$: Observable<User>;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -22,8 +22,8 @@ export class AuthService {
     private router: Router
   ) {
 
-    //// Get auth data, then get firestore user document || null
-    this.user = this.afAuth.authState.pipe(
+    // Get auth data, then get firestore user document or return null
+    this.user$ = this.afAuth.authState.pipe(
       switchMap(user => {
         if (user) {
           return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
@@ -34,8 +34,9 @@ export class AuthService {
     );
   }
 
-  googleLogin() {
+  async googleSignIn() {
     const provider = new auth.GoogleAuthProvider();
+    const credential = await this.afAuth.auth.signInWithPopup(provider);
     return this.oAuthLogin(provider);
   }
 
