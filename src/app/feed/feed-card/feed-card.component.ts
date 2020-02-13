@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/storage';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-feed-card',
@@ -7,13 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FeedCardComponent implements OnInit {
   @Input() data: any;
-  imageURL: string;
-  
+  imageUrl: Observable<string>;
 
-  constructor() { }
+  constructor(private storage: AngularFireStorage) { }
 
   ngOnInit(): void {
-    console.log(this.data);
+    const ref = this.storage.ref(this.data.imageUrl);
+    this.imageUrl = ref.getDownloadURL();
   }
-
 }
