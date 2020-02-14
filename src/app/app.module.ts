@@ -34,6 +34,7 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dialog.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { LogoutButtonComponent } from './logout-button/logout-button.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     NewPostComponent,
     NewPostDialogComponent,
     LoginButtonComponent,
-    HomePageComponent
+    HomePageComponent,
+    LogoutButtonComponent
   ],
   imports: [
     BrowserModule,
