@@ -38,7 +38,7 @@ export class UserComponent implements OnInit {
 
   createForm(name) {
     this.profileForm = this.fb.group({
-      name: [name, Validators.required ]
+      name: [name, Validators.required]
     });
   }
 
@@ -57,4 +57,5 @@ export class UserComponent implements OnInit {
           console.log('Logout error', error);
         });
   }
+
 }

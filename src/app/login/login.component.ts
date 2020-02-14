@@ -21,6 +21,14 @@ export class LoginComponent {
     this.createForm();
   }
 
+  tryGoogleLogin() {
+    this.authService.doGoogleLogin()
+        .then(res => {
+          this.router.navigate(['/user']);
+        });
+  }
+
+  // Other login methods
   createForm() {
     this.loginForm = this.fb.group({
       email: ['', Validators.required ],
@@ -37,13 +45,6 @@ export class LoginComponent {
 
   tryTwitterLogin() {
     this.authService.doTwitterLogin()
-        .then(res => {
-          this.router.navigate(['/user']);
-        });
-  }
-
-  tryGoogleLogin() {
-    this.authService.doGoogleLogin()
         .then(res => {
           this.router.navigate(['/user']);
         });
