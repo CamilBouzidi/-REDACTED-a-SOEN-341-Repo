@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/core/auth.service';
 
 @Component({
   selector: 'app-create-comment',
@@ -9,15 +11,18 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class CreateCommentComponent {
   @Input() data: any;
+  user: Observable<any>;
   comment: string;
   uploading = false;
 
-  constructor( private afs: AngularFirestore, private snackBar: MatSnackBar ) {}
+  constructor( private afs: AngularFirestore, private snackBar: MatSnackBar, private auth: AuthService) {
+    this.auth.user$.subscribe(user => this.user = user);
+  }
 
   submitComment = (): void => {
     this.uploading = true;
     this.afs.collection(`posts/${this.data.id}/comments`).add({
-      author: Math.floor(Math.random() * 100000),
+      author: this.user,
       comment: this.comment
     })
     /* Success message */

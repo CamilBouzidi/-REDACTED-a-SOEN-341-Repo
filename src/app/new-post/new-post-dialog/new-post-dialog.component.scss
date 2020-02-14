@@ -36,5 +36,7 @@
 
   textarea {
     max-height: 100px;
+    resize: none;
+    box-sizing: border-box;
   }
 }

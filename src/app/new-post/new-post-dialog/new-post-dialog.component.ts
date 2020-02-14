@@ -5,6 +5,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import 'firebase/storage';
 import 'firebase/firestore';
 import { MatDialogRef } from '@angular/material/dialog';
+import { AuthService } from 'src/app/core/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-new-post-dialog',
@@ -15,13 +17,18 @@ export class NewPostDialogComponent {
   imageFile: any;
   image: string | ArrayBuffer;
   caption: string;
+  user: Observable<any>;
+  uploading = false;
 
   constructor(
     private dialogRef: MatDialogRef<NewPostDialogComponent>,
     private afStorage: AngularFireStorage,
     private firestore: AngularFirestore,
-    private snackBar: MatSnackBar
-  ) {}
+    private snackBar: MatSnackBar,
+    public auth: AuthService
+  ) {
+    this.auth.user$.subscribe(user => this.user = user);
+  }
 
   handleImageInput = (input): void => {
     if (input.files.length === 0) {
@@ -37,6 +44,7 @@ export class NewPostDialogComponent {
   }
 
   uploadImage = (): void => {
+    this.uploading = true;
     const randomId = Math.random().toString(36).substring(2);
     const imageUrl = `images/${randomId}`;
 
@@ -49,7 +57,7 @@ export class NewPostDialogComponent {
       this.firestore.collection('posts').add({
         imageUrl,
         caption: this.caption || '',
-        uid: 'TODO: CHANGE ME'
+        user: this.user
       })
 
       /* Success message */
@@ -61,6 +69,15 @@ export class NewPostDialogComponent {
     /* Error message */
     .catch((e) => {
       this.snackBar.open('Upload failed...', 'Close', { duration: 3000 });
+      this.uploading = false;
     });
+  }
+
+  /**
+   * This resizes the textarea so that it always matches the height of the actual text.
+   */
+  resizeTextarea = (textarea): void => {
+    textarea.style.height = '0px'; // Shrinks it
+    textarea.style.height = `${textarea.scrollHeight}px`; // Takes the minimum height
   }
 }
