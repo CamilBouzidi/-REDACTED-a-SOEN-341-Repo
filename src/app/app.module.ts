@@ -43,7 +43,7 @@ import { LoginButtonComponent } from './login-button/login-button.component';
     NewPostDialogComponent,
     FeedComponent,
     FeedCardComponent,
-    LoginButtonComponent
+    LoginButtonComponent,
   ],
   imports: [
     BrowserModule,
