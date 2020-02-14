@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFirestore} from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import 'firebase/firestore';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,23 @@ import 'firebase/firestore';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ShutterFeed';
-  items: Observable<any[]>;
+  private postsCollection: AngularFirestoreCollection<any>;
 
-  constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('items').valueChanges();
+  title = 'ShutterFeed';
+  posts: Observable<any[]>;
+
+  constructor(afs: AngularFirestore) {
+    this.postsCollection = afs.collection<any>('posts');
+    this.posts = this.postsCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    );
+  }
+
+  output(post) {
+    console.log(post);
   }
 }

@@ -2,13 +2,6 @@
 <!-- Needs Router-outlet for Router to change page-->
 <router-outlet></router-outlet>
 
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.name}}
-  </li>
-</ul>
-<button mat-raised-button>This is a mat button!</button>
-
 <app-new-post></app-new-post>
 
 <app-feed></app-feed>
