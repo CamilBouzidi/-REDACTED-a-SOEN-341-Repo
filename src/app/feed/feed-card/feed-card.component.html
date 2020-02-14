@@ -1,0 +1,12 @@
+<mat-card class="feed-card">
+  <mat-card-header>
+    <div mat-card-avatar class="feed-card-header-image"></div>
+    <mat-card-title>Username</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="imageUrl | async" alt="Image with caption: '{{ data.caption }}'">
+  <mat-card-content>
+    <p>
+      {{data.caption}}
+    </p>
+  </mat-card-content>
+</mat-card>

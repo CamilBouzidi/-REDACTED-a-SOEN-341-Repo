@@ -16,6 +16,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
 
 /* Other imports */
 import { AppComponent } from './app.component';
@@ -28,6 +29,8 @@ import { PageLandingComponent } from './page-landing/page-landing.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewPostComponent } from './new-post/new-post.component';
 import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dialog.component';
+import { FeedComponent } from './feed/feed.component';
+import { FeedCardComponent } from './feed/feed-card/feed-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dial
     PageNotFoundComponent,
     PageLandingComponent,
     NewPostComponent,
-    NewPostDialogComponent
+    NewPostDialogComponent,
+    FeedComponent,
+    FeedCardComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,8 @@ import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dial
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
