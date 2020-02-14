@@ -1,0 +1,18 @@
+<mat-card class="feed-card">
+  <mat-card-header>
+    <img mat-card-avatar class="feed-card-header-image" [src]="data.user.photoURL" />
+    <mat-card-title>{{data.user.displayName}}</mat-card-title>
+    <mat-card-subtitle>{{data.user.email}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="imageUrl | async" alt="Image with caption: '{{ data.caption }}'">
+  <mat-card-content>
+    <p>
+      {{data.caption}}
+    </p>
+    <app-comment *ngFor="let comment of comments | async" [comment]="comment"></app-comment>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <app-create-comment [data]="data"></app-create-comment>
+  </mat-card-footer>
+</mat-card>

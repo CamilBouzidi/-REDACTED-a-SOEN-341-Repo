@@ -1,0 +1,3 @@
+<div class="feed" *ngFor="let post of posts | async">
+    <app-feed-card [data]="post"></app-feed-card>
+</div>

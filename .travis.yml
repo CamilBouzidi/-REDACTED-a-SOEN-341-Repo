@@ -8,13 +8,6 @@ node_js:
 addons:
   chrome: stable
 
-before_script:
-  - npm install -g --silent @angular/cli@9.0.1
-
-cache:
-  directories:
-    - ./node_modules
-
 install:
   - npm install
 

@@ -19,11 +19,11 @@
 
   <mat-dialog-actions align="end">
     <mat-form-field class="caption-field">
-      <textarea [(ngModel)]="caption" matInput maxlength="256" placeholder="Caption" rows="1"></textarea>
+      <textarea #textarea [(ngModel)]="caption" matInput maxlength="256" placeholder="Caption" rows="1" (input)="resizeTextarea(textarea)"></textarea>
       <mat-hint align="end">{{ caption ? caption.length : 0 }} / 256</mat-hint>
     </mat-form-field>
 
     <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-raised-button (click)="uploadImage()" [disabled]="!image" color="primary">Share</button>
+    <button mat-raised-button (click)="uploadImage()" [disabled]="!image || uploading" color="primary">Share</button>
   </mat-dialog-actions>
 </div>
