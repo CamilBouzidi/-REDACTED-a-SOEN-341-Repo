@@ -31,6 +31,7 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { NewPostDialogComponent } from './new-post/new-post-dialog/new-post-dialog.component';
 import { FeedComponent } from './feed/feed.component';
 import { FeedCardComponent } from './feed/feed-card/feed-card.component';
+import { LoginButtonComponent } from './login-button/login-button.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FeedCardComponent } from './feed/feed-card/feed-card.component';
     NewPostComponent,
     NewPostDialogComponent,
     FeedComponent,
-    FeedCardComponent
+    FeedCardComponent,
+    LoginButtonComponent
   ],
   imports: [
     BrowserModule,
