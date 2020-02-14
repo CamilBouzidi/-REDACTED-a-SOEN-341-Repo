@@ -1,8 +1,3 @@
 <button *ngIf="user" mat-raised-button color="primary" (click)="openDialog()">
-  <mat-icon>add_to_photos</mat-icon> New post
+  <mat-icon>add_to_photos</mat-icon><span class="button-info"> New post</span>
 </button>
-
-<button href="/user-profile" *ngIf="!user" mat-raised-button color="primary" (click)="auth.googleSignIn()">
-  <mat-icon>account_circle</mat-icon> Login
-</button>
-

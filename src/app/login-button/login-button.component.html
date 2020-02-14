@@ -6,7 +6,7 @@
 <ng-template #showLogoutButton>
   <div *ngIf="auth.user$ | async as user">
     <!-- Display User Name -->
-    <span>You're logged in as {{user.displayName}} </span>
+    <span class="login-info">You're logged in as {{user.displayName}} </span>
     <button mat-raised-button color="primary" id="logout_button" (click)="onLogoutClick()">
       Logout
     </button>
@@ -16,6 +16,6 @@
 <!--Not authenticated-->
 <ng-template #showLoginButton>
     <button mat-raised-button color="primary" id="login_button" (click)="onLoginClick()">
-      Login
+      <mat-icon>account_circle</mat-icon> Login
     </button>
 </ng-template>

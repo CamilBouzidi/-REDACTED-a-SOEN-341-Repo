@@ -1,4 +1,10 @@
-<div class="dialog-wrapper">
+<div class="dialog-wrapper" [class.uploading]="uploading">
+  <div class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div class="dialog-overlay"></div>
+
   <button class="close-icon" mat-icon-button mat-dialog-close>
     <mat-icon>close</mat-icon>
   </button>

@@ -1,10 +1,10 @@
-<h1>{{title}}</h1>
-<nav>
-<app-login-button></app-login-button>
+<nav class="nav-bar">
+  <div class="nav-content">
+    <a routerLink="/" class="title">{{title}}</a>
+    <app-new-post class="post"></app-new-post>
+    <app-login-button class="login"></app-login-button>
+  </div>
 </nav>
+
 <!-- Needs Router-outlet for Router to change page-->
 <router-outlet></router-outlet>
-
-<app-new-post></app-new-post>
-
-<app-feed></app-feed>

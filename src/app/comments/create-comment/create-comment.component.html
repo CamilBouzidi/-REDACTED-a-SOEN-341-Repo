@@ -8,5 +8,5 @@
         (input)="resizeTextarea(textarea)"></textarea>
   </mat-form-field>
 
-  <button mat-button (click)="submitComment()" [disabled]="uploading || !user">Submit</button>
+  <button mat-button (click)="submitComment()" [disabled]="uploading || !user || !textarea.value">Submit</button>
 </div>

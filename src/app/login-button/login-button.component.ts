@@ -1,5 +1,5 @@
 // Adding back Alexander's work
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 import { AuthService } from '../core/auth.service';
 
@@ -8,14 +8,9 @@ import { AuthService } from '../core/auth.service';
   templateUrl: './login-button.component.html',
   styleUrls: ['./login-button.component.scss']
 })
-export class LoginButtonComponent implements OnInit {
+export class LoginButtonComponent {
 
   constructor(public auth: AuthService, private router: Router) { }
-
-  ngOnInit(): void {
-    const loginButton = document.getElementById('login_button');
-    loginButton.style.display = 'block';
-  }
 
   onLoginClick() {
     this.router.navigateByUrl('/user-profile');
