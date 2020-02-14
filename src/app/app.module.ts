@@ -33,6 +33,7 @@ import { CreateCommentComponent } from './comments/create-comment/create-comment
 import { CommentComponent } from './comments/comment/comment.component';
 import { FeedComponent } from './feed/feed.component';
 import { FeedCardComponent } from './feed/feed-card/feed-card.component';
+import { LoginButtonComponent } from './login-button/login-button.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FeedCardComponent } from './feed/feed-card/feed-card.component';
     CreateCommentComponent,
     CommentComponent,
     FeedComponent,
-    FeedCardComponent
+    FeedCardComponent,
+    LoginButtonComponent,
   ],
   imports: [
     BrowserModule,

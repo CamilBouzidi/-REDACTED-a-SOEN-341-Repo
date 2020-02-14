@@ -5,7 +5,11 @@
   "projects": {
     "ShutterFeed": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -125,10 +129,5 @@
       }
     }
   },
-  "defaultProject": "ShutterFeed",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  }
+  "defaultProject": "ShutterFeed"
 }
