@@ -8,5 +8,10 @@
     <p>
       {{data.caption}}
     </p>
+    <app-comment *ngFor="let comment of comments | async" [comment]="comment"></app-comment>
   </mat-card-content>
+
+  <mat-card-footer>
+    <app-create-comment [data]="data"></app-create-comment>
+  </mat-card-footer>
 </mat-card>

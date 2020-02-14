@@ -1,0 +1,14 @@
+.comment-form {
+  width: 100%;
+  display: flex;
+}
+
+.comment-field {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.comment-textarea {
+  resize: none;
+  box-sizing: border-box;
+}
