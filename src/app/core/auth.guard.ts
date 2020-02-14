@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, UrlTree } from '@angular/router';
+import { Observable } from 'rxjs';
 
 import { AuthService} from './auth.service';
-import { Observable } from 'rxjs';
 import { tap, map, take } from 'rxjs/operators';
 
-@Injectable(/*{
+@Injectable({
   providedIn: 'root'
-}*/)
+})
 export class AuthGuard implements CanActivate {
 
   constructor(private auth: AuthService, private router: Router) {
@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate {
         loggedIn => {
         if (!loggedIn) {
           console.log('access denied');
-          this.router.navigate(['/login']);
+          this.router.navigate(['/']);
         }
       }));
   }
