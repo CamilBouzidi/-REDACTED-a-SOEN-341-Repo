@@ -1,7 +1,7 @@
 export interface FirebaseUser {
   uid: string;
-  email: string | null;
+  email: string;
   photoURL?: string;
-  displayName?: string | null;
+  displayName?: string;
   myCustomData?: string;
 }
