@@ -57,6 +57,10 @@ Use checkboxes like this:
 * List Requirements if there are any
 -->
 
+## Risks
+
+* List the risks associated with the user story that might add more complexity
+
 ## Acceptance Tests
 
 * List Acceptance Tests with bullet points
