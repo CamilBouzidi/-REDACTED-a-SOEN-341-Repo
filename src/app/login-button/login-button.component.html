@@ -15,7 +15,7 @@
 
 <!--Not authenticated-->
 <ng-template #showLoginButton>
-    <button mat-raised-button color="primary" id="login_button" (click)="onLoginClick()">
+    <a routerLink="user-profile" mat-raised-button color="primary" id="login_button">
       <mat-icon>account_circle</mat-icon> Login
-    </button>
+    </a>
 </ng-template>
