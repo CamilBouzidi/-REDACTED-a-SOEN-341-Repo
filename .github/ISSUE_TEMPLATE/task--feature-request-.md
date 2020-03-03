@@ -1,33 +1,32 @@
 ---
-name: User Story (Feature Request)
-about: Suggest an idea for this project in the form of a User Story
-title: 'User Story #'
-labels: documentation, user story
+name: Task (Feature Request)
+about: Add tasks
+title: 'Task '
+labels: task
 assignees: ''
 
 ---
 
-<!-- ==== Template for User Story Checklist ====
+<!-- ==== Template for Task Checklist ====
 
 1. Enter the name
-2. Describe the feature or write the user story in a first-person point of view.
+2. Describe the task.
 3. Write the acceptance test(s). Those are the validation tests that must be met to consider the issue to be closed.
-4. Describe any related features or user stories. Doing so will help us create epics more easily.
-5. List the tasks to be performed to complete the user story.
+4. Describe any related features or user stories.
+5. List the subtasks to be performed to complete the task.
 6. Label the issue
-7. Add new user story to wiki
 
  ============================================-->
 
-<!-- Choose the type: User Story or Task. Don't worry if the pipes don't line up-->
+<!-- EV = Effort Value -->
 
-| User Story/Task        | P | SP |
+| Task                   | P | EV |
 |:-----------------------|:-:|:--:|
-| Name                   | P | SP |
+| Name                   | P | EV |
 
 <!-- Write a Description Below -->
 
-Write Long Form User Story or Enter Description. Keep it short here (you'll have the opportunity to elaborate in the Additional context Section)
+Write Description of the task.
 
 <!-- Don't write anything near the line -->
 ------------------------------------------
@@ -35,7 +34,7 @@ Write Long Form User Story or Enter Description. Keep it short here (you'll have
 ## Task List
 
 - [ ] Define Acceptance test
-- [ ] Assign Story Point Value
+- [ ] Assign Effort Value
 - [ ] Assign Priority Number
 - [ ] Define tasks
 - [ ] Verify issue completion with Acceptance Test. Done!
@@ -50,16 +49,6 @@ Use checkboxes like this:
 -->
 <!-- Don't write anything near the line -->
 ------------------------------------------
-
-<!--
-## Requirements
-
-* List Requirements if there are any
--->
-
-## Risks
-
-* List the risks associated with the user story that might add more complexity
 
 ## Acceptance Tests
 
