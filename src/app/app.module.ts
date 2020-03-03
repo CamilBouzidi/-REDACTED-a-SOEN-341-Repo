@@ -8,6 +8,7 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
 
 /* Material */
 import { MatButtonModule } from '@angular/material/button';
@@ -35,6 +36,7 @@ import { CommentComponent } from './comments/comment/comment.component';
 import { FeedComponent } from './feed/feed.component';
 import { FeedCardComponent } from './feed/feed-card/feed-card.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
+import { FollowButtonComponent } from './follow-button/follow-button.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { LoginButtonComponent } from './login-button/login-button.component';
     FeedComponent,
     FeedCardComponent,
     LoginButtonComponent,
+    FollowButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { LoginButtonComponent } from './login-button/login-button.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
+    AngularFireFunctionsModule,
 
     /* Material */
     BrowserAnimationsModule,
