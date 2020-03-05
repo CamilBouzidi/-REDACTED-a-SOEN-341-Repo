@@ -27,7 +27,10 @@ export const newPost = functions.https.onCall(async (data, context) => {
   }
 
   // Send post to firestone
-  await admin.firestore().collection('posts').add(post).then();
+  await admin.firestore().collection('posts').add(post)
+  .then(() => {
+    newNotification(user, 'newPost');
+  });
   return {response: 'Success!'};
 });
 
@@ -53,7 +56,12 @@ export const follow = functions.https.onCall(async (data, context) => {
   // Add following collection on following user
   await admin.firestore().doc(`users/${follower}`).update({
     following: admin.firestore.FieldValue.arrayUnion(followed)
-  })
+  }).then();
+
+  // Notify the followed user that he has a new follower
+  await getUserInfo(followed).then(user => {
+    newNotification(user, 'newFollower');
+  });
 
   return 'Success!';
 });
@@ -80,8 +88,36 @@ export const unfollow = functions.https.onCall(async (data, context) => {
 });
 
 // Private functions
-export const getUserInfo = async (uid: string) => {
+/**
+ * This function returns the user information as a .json object.
+ * @param uid  uid of the user
+ */
+const getUserInfo = async (uid: string) => {
   let user;
   await admin.firestore().doc(`users/${uid}`).get().then(resolve => user = resolve.data());
   return user;
+}
+
+/**
+ * This functions handles notifications.
+ * @param user the user object
+ * @param type newPost, newFollower
+ */
+const newNotification = (user: any, type: string) => {
+  const followedBy = user.followedBy;
+  followedBy.forEach((follower: string) => {
+    admin.firestore().collection(`users/${follower}/notifications`).add({
+      timestamp: Date.now(),
+      type: type,
+      seen: false,
+      user: {
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        uid: user.uid
+      }
+    }).catch(error => {
+      console.error(error);
+    });
+  });
+  return;
 }

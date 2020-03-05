@@ -59,13 +59,11 @@ export class NewPostDialogComponent {
 
     /* Uploading the data to associate the image to the user */
     .then(() => {
-      this.newPost(data)
+      this.newPost(data).subscribe();
       
       /* Success message */
-      .subscribe(() => {
-        this.snackBar.open('Upload successful!', 'Close', { duration: 3000 });
-        this.dialogRef.close();
-      });
+      this.snackBar.open('Upload successful!', 'Close', { duration: 3000 });
+      this.dialogRef.close();
     })
     /* Error message */
     .catch(() => {

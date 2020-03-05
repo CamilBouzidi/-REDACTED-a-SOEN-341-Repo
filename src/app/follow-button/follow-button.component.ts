@@ -22,7 +22,10 @@ export class FollowButtonComponent {
     this.followCallable = fns.httpsCallable('follow');
     this.unfollowCallable = fns.httpsCallable('unfollow');
     this.auth.user$.subscribe(user => {
-      this.following = user.following.includes(this.uid);
+      if (user?.following)
+        this.following = user.following.includes(this.uid);
+      else 
+        this.following = false;
     });
   }
 
@@ -30,8 +33,7 @@ export class FollowButtonComponent {
     this.disable = true;
     this.followCallable({
       uid: this.uid
-    }).subscribe((response) => {
-      console.log(response);
+    }).subscribe(() => {
       this.disable = false;
       this.cdRef.detectChanges(); // Without this, the disable sometimes fails to get updated.
     });
@@ -41,8 +43,7 @@ export class FollowButtonComponent {
     this.disable = true;
     this.unfollowCallable({
       uid: this.uid
-    }).subscribe((response) => {
-      console.log(response);
+    }).subscribe(() => {
       this.disable = false;
       this.cdRef.detectChanges(); // Without this, the disable sometimes fails to get updated.
     });

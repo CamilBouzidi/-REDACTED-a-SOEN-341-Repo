@@ -19,6 +19,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 /* Other imports */
 import { AppComponent } from './app.component';
@@ -37,6 +39,7 @@ import { FeedComponent } from './feed/feed.component';
 import { FeedCardComponent } from './feed/feed-card/feed-card.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
 import { FollowButtonComponent } from './follow-button/follow-button.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +55,7 @@ import { FollowButtonComponent } from './follow-button/follow-button.component';
     FeedCardComponent,
     LoginButtonComponent,
     FollowButtonComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +80,8 @@ import { FollowButtonComponent } from './follow-button/follow-button.component';
     MatFormFieldModule,
     MatSnackBarModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
