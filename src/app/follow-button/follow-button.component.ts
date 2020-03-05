@@ -9,23 +9,24 @@ import { AuthService } from 'src/app/core/auth.service';
 })
 export class FollowButtonComponent {
   @Input() uid: string;
-  followCallable: Function;
-  unfollowCallable: Function;
+  followCallable: any;
+  unfollowCallable: any;
   following = null;
   disable = false;
 
   constructor(
     private fns: AngularFireFunctions,
     private auth: AuthService,
-    private cdRef : ChangeDetectorRef
+    private cdRef: ChangeDetectorRef
   ) {
     this.followCallable = fns.httpsCallable('follow');
     this.unfollowCallable = fns.httpsCallable('unfollow');
     this.auth.user$.subscribe(user => {
-      if (user?.following)
+      if (user?.following) {
         this.following = user.following.includes(this.uid);
-      else 
+      } else {
         this.following = false;
+      }
     });
   }
 

@@ -15,7 +15,9 @@ export class NotificationsComponent {
     this.auth.user$.subscribe(user => {
       if (user) {
         this.user = user;
-        this.notifications = this.afs.collection(`users/${user.uid}/notifications`, ref => ref.orderBy('timestamp', 'desc').limit(10)).valueChanges();
+        this.notifications = this.afs.collection(`users/${user.uid}/notifications`, ref =>
+        ref.orderBy('timestamp', 'desc').limit(10))
+        .valueChanges();
       }
     });
   }

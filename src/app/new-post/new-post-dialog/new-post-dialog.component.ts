@@ -18,7 +18,7 @@ export class NewPostDialogComponent {
   image: string | ArrayBuffer;
   caption: string;
   user: Observable<any>;
-  newPost: Function;
+  newPost: any;
   uploading = false;
 
   constructor(
