@@ -2,7 +2,7 @@ Some tips when using Git
 
 # Git Guide and commonly used commands
 
-See [Git-commands](https://laurentguides.now.sh/#/git-guide)
+See [Git-commands](https://docs.laurentlao.com/#/guides/guide-git)
 
 # Writing good Git Commit Messages
 

@@ -21,7 +21,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 
-
 /* Other imports */
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -82,6 +81,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     MatCardModule,
     MatProgressSpinnerModule,
     MatMenuModule
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
