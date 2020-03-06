@@ -32,7 +32,7 @@ This project is a school assignment for the SOEN 341 class meant to result in a 
 This project could benefit from having an Angular front-end and a Firebase back-end to leverage existing work-experience from project members.
 
 ### Techniques
-For the basic prototype, the possibility of hosting a local server is being considered. Ideally, the team will settle on having a server hosted on a platform like AWS as soon as possible.
+The project is being hosted on Firebase platform's.
 
 # Angular Readme
 
