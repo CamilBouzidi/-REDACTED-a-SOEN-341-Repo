@@ -53,5 +53,33 @@ Notification --> Firebase
 Firebase --> Notifications
 FirebaseUser --> Notification
 
+class Controller{
+  - User account controller
+  - Post controller
+  - Comment controller
+  - Notification controller
+}
+
+class View{
+  - Feed
+  - New post window
+  - Profile page
+}
+
+class Database{
+  - Posts
+  - Users
+  - Comments
+  - Images
+  - Notifications
+}
+
+hide circle
+
+View --> Controller : User inputs
+Controller --> View : Display
+Controller --> Database : User submission
+Database --> Controller : Information to display
+
 @enduml
 ```
