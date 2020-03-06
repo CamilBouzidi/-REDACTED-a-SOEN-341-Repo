@@ -14,7 +14,7 @@ export class FeedComponent {
   posts: Observable<any[]>;
 
   constructor(afs: AngularFirestore) {
-    this.posts = afs.collection('posts').snapshotChanges().pipe(
+    this.posts = afs.collection('posts', ref => ref.orderBy('timestamp', 'desc')).snapshotChanges().pipe(
       /* This mess of a code allows us to create the post object we desire
       by extracting only the data we want from the original post object that
       we receive, which is the post id and the post data. */

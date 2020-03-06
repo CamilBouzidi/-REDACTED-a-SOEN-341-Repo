@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import 'firebase/storage';
-import 'firebase/firestore';
 import { MatDialogRef } from '@angular/material/dialog';
 import { AuthService } from 'src/app/core/auth.service';
 import { Observable } from 'rxjs';
+import { v4 as getUuid } from 'uuid';
+import { AngularFireFunctions } from '@angular/fire/functions';
 
 @Component({
   selector: 'app-new-post-dialog',
@@ -18,16 +18,18 @@ export class NewPostDialogComponent {
   image: string | ArrayBuffer;
   caption: string;
   user: Observable<any>;
+  newPost: any;
   uploading = false;
 
   constructor(
     private dialogRef: MatDialogRef<NewPostDialogComponent>,
     private afStorage: AngularFireStorage,
-    private firestore: AngularFirestore,
+    private fns: AngularFireFunctions,
     private snackBar: MatSnackBar,
-    public auth: AuthService
+    private auth: AuthService
   ) {
     this.auth.user$.subscribe(user => this.user = user);
+    this.newPost = this.fns.httpsCallable('newPost');
   }
 
   handleImageInput = (input): void => {
@@ -45,29 +47,26 @@ export class NewPostDialogComponent {
 
   uploadImage = (): void => {
     this.uploading = true;
-    const randomId = Math.random().toString(36).substring(2);
-    const imageUrl = `images/${randomId}`;
+    const uuid = getUuid();
+    const data = {
+      uuid,
+      caption: this.caption || ''
+    };
 
     /* Uploading the image as a file */
-    const ref = this.afStorage.ref(imageUrl);
+    const ref = this.afStorage.ref(`images/${uuid}`);
     ref.put(this.imageFile)
 
-    /* Uploading the post information (imageUrl, caption and uid) */
+    /* Uploading the data to associate the image to the user */
     .then(() => {
-      this.firestore.collection('posts').add({
-        imageUrl,
-        caption: this.caption || '',
-        user: this.user
-      })
-
+      this.newPost(data).subscribe();
+      
       /* Success message */
-      .then(() => {
-        this.snackBar.open('Upload successful!', 'Close', { duration: 3000 });
-        this.dialogRef.close();
-      });
+      this.snackBar.open('Upload successful!', 'Close', { duration: 3000 });
+      this.dialogRef.close();
     })
     /* Error message */
-    .catch((e) => {
+    .catch(() => {
       this.snackBar.open('Upload failed...', 'Close', { duration: 3000 });
       this.uploading = false;
     });

@@ -1,0 +1,6 @@
+<button mat-button 
+  [color]="following ? 'black' : 'primary'" 
+  (click)="following ? unfollow() : follow()" 
+  [disabled]="disable || following == null">
+    {{following ? "Unfollow" : "Follow"}}
+</button>

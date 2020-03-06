@@ -1,0 +1,19 @@
+<button *ngIf="user" mat-icon-button [matMenuTriggerFor]="notificationMenu">
+  <mat-icon color ="primary">notifications</mat-icon>
+</button>
+
+<mat-menu class="notification-menu" #notificationMenu="matMenu">
+  <div *ngFor="let notification of notifications | async;" >
+
+    <div class="notification" *ngIf="notification.type === 'newPost'" #newPost>
+      <img class="user-photo" src="{{notification.user.photoURL}}">
+      <p class="notification-text"><strong>{{notification.user.displayName}}</strong> uploaded a new picture!</p>
+    </div>
+    
+    <div class="notification" *ngIf="notification.type === 'newFollower'" #newFollower>
+      <img class="user-photo" src="{{notification.user.photoURL}}">
+      <p class="notification-text"><strong>{{notification.user.displayName}}</strong> started following you!</p>
+      <app-follow-button [uid]="notification.user.uid" class="follow-button"></app-follow-button>
+    </div>
+  </div>
+</mat-menu>

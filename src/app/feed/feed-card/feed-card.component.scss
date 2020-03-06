@@ -6,3 +6,12 @@
     margin-bottom: 60px;
   }
 }
+
+.header {
+  position: relative;
+
+  .follow-button {
+    position: absolute;
+    right: 0;
+  }
+}
