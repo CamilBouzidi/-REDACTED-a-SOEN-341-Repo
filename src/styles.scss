@@ -30,3 +30,7 @@ $ShutterFeed-theme: mat-light-theme($ShutterFeed-primary, $ShutterFeed-accent, $
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  background-color: rgb(250,250,250);
+}

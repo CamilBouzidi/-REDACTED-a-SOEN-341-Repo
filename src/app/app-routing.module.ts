@@ -8,12 +8,14 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 import {AppComponent} from './app.component';
+import { FeedComponent } from './feed/feed.component';
 
 
 const routes: Routes = [
   // Add routes here
   // For auth guard: { path: 'notes', component: NotesListComponent,  canActivate: [AuthGuard] }
   // { path: 'landing', component: NotesListComponent,  canActivate: [AuthGuard] },
+  { path: '', component: FeedComponent },
   {path: 'user-profile', component: UserProfileComponent},
   // {path: 'landing', component: PageLandingComponent},
   {path: '404', component: PageNotFoundComponent},
