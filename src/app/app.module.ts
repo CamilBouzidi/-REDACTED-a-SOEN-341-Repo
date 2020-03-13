@@ -39,6 +39,8 @@ import { FeedCardComponent } from './feed/feed-card/feed-card.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
 import { FollowButtonComponent } from './follow-button/follow-button.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { StoryContainerComponent } from './story-container/story-container.component';
+import { NewStoryDialogComponent } from './story-container/new-story-dialog/new-story-dialog.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
     LoginButtonComponent,
     FollowButtonComponent,
     NotificationsComponent,
+    StoryContainerComponent,
+    NewStoryDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,7 +84,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     MatSnackBarModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatMenuModule
+    MatMenuModule,
     MatProgressSpinnerModule
   ],
   providers: [],

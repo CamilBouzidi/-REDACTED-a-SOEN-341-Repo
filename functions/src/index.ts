@@ -121,3 +121,28 @@ const newNotification = (user: any, type: string) => {
   });
   return;
 }
+
+export const newStory = functions.https.onCall(async (data, context) => {
+  if (!context.auth?.uid) {
+    return; //Do not proceed if the user is not logged in.
+  }
+
+  // Get user info from firestone
+  const user = await getUserInfo(context.auth.uid);
+
+  // Create post object
+  const stories = {
+    imageUrl: `storiesImages/${data.uuid}`,
+    duration: data.duration,
+    expiryTime: data.expiryTime,
+    timestamp: Date.now(),
+    user
+  }
+
+  // Send post to firestone
+  await admin.firestore().collection('stories').add(stories)
+  .then(() => {
+    newNotification(user, 'newStory');
+  });
+  return {response: 'Success!'};
+});

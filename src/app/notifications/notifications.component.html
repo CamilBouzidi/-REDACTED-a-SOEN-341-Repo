@@ -15,5 +15,10 @@
       <p class="notification-text"><strong>{{notification.user.displayName}}</strong> started following you!</p>
       <app-follow-button [uid]="notification.user.uid" class="follow-button"></app-follow-button>
     </div>
+
+    <div class="notification" *ngIf="notification.type === 'newStory'" #newStory>
+      <img class="user-photo" src="{{notification.user.photoURL}}">
+      <p class="notification-text"><strong>{{notification.user.displayName}}</strong> uploaded a new Story!</p>
+    </div>
   </div>
 </mat-menu>
