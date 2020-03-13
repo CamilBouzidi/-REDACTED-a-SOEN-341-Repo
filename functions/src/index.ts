@@ -130,8 +130,8 @@ export const newStory = functions.https.onCall(async (data, context) => {
   // Get user info from firestone
   const user = await getUserInfo(context.auth.uid);
 
-  // Create post object
-  const stories = {
+  // Create story object
+  const story = {
     imageUrl: `storiesImages/${data.uuid}`,
     duration: data.duration,
     expiryTime: data.expiryTime,
@@ -140,7 +140,7 @@ export const newStory = functions.https.onCall(async (data, context) => {
   }
 
   // Send post to firestone
-  await admin.firestore().collection('stories').add(stories)
+  await admin.firestore().collection('stories').add(story)
   .then(() => {
     newNotification(user, 'newStory');
   });
