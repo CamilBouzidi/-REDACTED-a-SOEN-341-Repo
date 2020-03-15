@@ -49,10 +49,10 @@ export class NewStoryDialogComponent {
   uploadImage = (): void => {
     this.uploading = true;
     const uuid = getUuid();
-    if (this.duration > 30){
+    if (this.duration > 30 || this.duration < 1){
       this.duration = 30;
     }
-    if (this.expiryTime > 48){
+    if (this.expiryTime > 48 || this.expiryTime < 1){
       this.expiryTime = 48;
     }
     const data = {
@@ -79,8 +79,4 @@ export class NewStoryDialogComponent {
       this.uploading = false;
     });
   }
-
-  ngOnInit(): void {
-  }
-
 }
