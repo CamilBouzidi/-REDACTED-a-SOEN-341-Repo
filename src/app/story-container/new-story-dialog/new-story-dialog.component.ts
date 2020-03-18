@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/core/auth.service';
 import { Observable } from 'rxjs';
 import { v4 as getUuid } from 'uuid';
 import { AngularFireFunctions } from '@angular/fire/functions';
+import { Timestamp } from '@google-cloud/firestore';
 
 @Component({
   selector: 'app-new-story-dialog',
@@ -20,6 +21,8 @@ export class NewStoryDialogComponent {
   expiryTime: number;
   user: Observable<any>;
   newStory: any;
+  uploadTime: number;
+  cutoff: number;
   uploading = false;
 
   constructor(
@@ -48,6 +51,8 @@ export class NewStoryDialogComponent {
 
   uploadImage = (): void => {
     this.uploading = true;
+    this.uploadTime = Date.now();
+    this.cutoff = this.uploadTime + this.expiryTime*60*60*1000;
     const uuid = getUuid();
     if (this.duration > 30 || this.duration < 1){
       this.duration = 30;
@@ -58,7 +63,9 @@ export class NewStoryDialogComponent {
     const data = {
       uuid,
       duration: this.duration || 10,
-      expiryTime: this.expiryTime || 24
+      expiryTime: this.expiryTime || 24,
+      uploadTime: this.uploadTime,
+      cutoff: this.cutoff
     };
 
     /* Uploading the image as a file */

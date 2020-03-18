@@ -4,6 +4,7 @@ import * as functions from 'firebase-functions';
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 import * as admin from 'firebase-admin';
 admin.initializeApp();
+admin.firestore().collection('stories').orderBy("cutoff");
 
 
 /**
@@ -135,7 +136,8 @@ export const newStory = functions.https.onCall(async (data, context) => {
     imageUrl: `storiesImages/${data.uuid}`,
     duration: data.duration,
     expiryTime: data.expiryTime,
-    timestamp: Date.now(),
+    uploadTime: data.uploadTime,
+    cutoff: data.cutoff,
     user
   }
 
