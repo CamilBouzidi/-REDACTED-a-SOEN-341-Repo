@@ -17,3 +17,5 @@ This page lists the meeting minutes
 * [Feb 14 2020](Feb-14-2020.md)
 
 * [March 4 2020](March-4-2020.md)
+
+* [March 12 2020](March-12-2020.md)
