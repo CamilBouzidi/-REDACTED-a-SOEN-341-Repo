@@ -8,7 +8,7 @@ This is the repository for ShutterFeed, our SOEN 341 group project.
 
 ## Members
 * [Alexander Robitaille](https://github.com/A-Robitaille)
-* [Camil Bouzidi](https://github.com/CamilBouzidi)
+* [Camil Bouzidi](https://github.com/CamilBouzidi) (Please Note: Due to a login error, most of Camil's contributions appear as [Ajithmelkote](https://github.com/Ajithmelkote) or hackerrank)
 * [Judy Mezaber](https://github.com/jmezaber)
 * [Laurent Lao](https://github.com/laurentlaurent/)
 * [Tommy Josépovic](https://github.com/tommy-josepovic)
