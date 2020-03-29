@@ -1,5 +1,7 @@
 The user stories of our application:
 
+If there are any discrepancies between the documentation and the issues on GitHub, please prioritize the issues on GitHub.
+
 _Click on the User Story's title to see related issue. To see the task breakdown, consult the issues on the GitHub project. Each User Story has a number (1 to 5) with the tasks identified as x.1, x.2, x.3, etc._
 
 **[User Story 1: Upload Pictures](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/issues/8)**
@@ -53,14 +55,15 @@ Use checkboxes like this:
 * List Requirements if there are any
 -->
 
-## Acceptance Tests
+## Acceptance Tests [#78]
 
 * User can log in
 * User can see their profile
 * User can upload jpg, png, (other formats?)
 * User cannot upload non-pictures files
 * User can see uploaded pictures in their profile
-* User cannot access pictures they do not own/are not friends with owner
+<!---
+* User cannot access pictures they do not own/are not friends with owner--->
 
 <!-- Don't write anything near the line -->
 ------------------------------------------
@@ -121,7 +124,7 @@ Use checkboxes like this:
 * List Requirements if there are any
 -->
 
-## Acceptance Tests
+## Acceptance Tests [#85]
 
 * User can comment under their own picture
 * Find a way to make comment UI scalable
@@ -187,7 +190,7 @@ Use checkboxes like this:
 * List Requirements if there are any
 -->
 
-## Acceptance Tests
+## Acceptance Tests [#91]
 
 * Set up notification
 * List of followers/people we follow
@@ -235,7 +238,7 @@ The fact that this user story deals with time (making the picture disappear afte
 
 ------------------------------------------
 
-## Acceptance Tests
+## Acceptance Tests [#99]
 
 * Can post a picture 
 * Picture will disappear after 24h 
