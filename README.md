@@ -8,14 +8,14 @@ This is the repository for ShutterFeed, our SOEN 341 group project.
 
 ## Members
 * [Alexander Robitaille](https://github.com/A-Robitaille)
-* [Camil Bouzidi](https://github.com/CamilBouzidi)
+* [Camil Bouzidi](https://github.com/CamilBouzidi) (Please Note: Due to a login error, most of Camil's contributions appear as [Ajithmelkote](https://github.com/Ajithmelkote) or hackerrank)
 * [Judy Mezaber](https://github.com/jmezaber)
 * [Laurent Lao](https://github.com/laurentlaurent/)
 * [Tommy Josépovic](https://github.com/tommy-josepovic)
 
 ## Description
 
-This project is a school assignment for the SOEN 341 class meant to result in a working Instagram-like program.
+This project is a school assignment for the SOEN 341 class meant to result in a working Instagram-like website. The website allows users to log in and post pictures that they like. Once that picture is uploaded, anyone can comment on it, but you can also follow users to receive updates whenever they post a picture.
 
 ## Core Features
 [Also available as User Stories](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/wiki/User-Stories)
@@ -25,14 +25,18 @@ This project is a school assignment for the SOEN 341 class meant to result in a 
 
 ## Additional Features
 [Also available as User Stories](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/wiki/User-Stories)
+* User can upload ShutterFeed Stories that last a certain amount of time and that will disappear after a number of hours set by the user
+* User will have a username. If it is taken, a username generator suggests a new username.
 
 ## Languages and Techniques
 
 ### Languages
-This project could benefit from having an Angular front-end and a Firebase back-end to leverage existing work-experience from project members.
+This project could benefit from having an Angular front-end and a [Firebase](https://firebase.google.com/) back-end to leverage existing work-experience from project members.
 
 ### Techniques
-The project is being hosted on Firebase platform's.
+The project is being hosted on [Firebase](https://firebase.google.com/) platform's. It allows for domain hosting, database design and storage. Moreover, it offers a authentification plug-in that uses Google Accounts.
+
+A library called [AngularFire](https://github.com/angular/angularfire) gives developer access to Firebase functions and modules from their Angular code.
 
 # Angular Readme
 
@@ -61,5 +65,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
 
 
