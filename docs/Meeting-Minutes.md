@@ -19,3 +19,11 @@ This page lists the meeting minutes
 * [March 4 2020](March-4-2020.md)
 
 * [March 12 2020](March-12-2020.md)
+
+* [March 20 2020](March-20-2020.md)
+
+* [March 24 2020](March-24-2020.md)
+
+* [March 27 2020](March-27-2020.md)
+
+* [April 3 2020](April-3-2020.md)
