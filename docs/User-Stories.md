@@ -77,7 +77,9 @@ Use bullet points like this:
 ~~~~~~~~~~~~~~~-->
 
 ## Additional context
-Add any other context or screenshots about the feature request here.
+In order to complete this User Story, a User Account had to be created. To observe its class diagram and how the Firebase User Authentification system was implemented, please visit the [User Account Login page](User-Account-Login.md).
+
+To see how the User can upload an image to the backend, please consult the [User Account to Backend Integration page](User-Account-To-Backend.md).
 
 **[User Story 2: Leave comments on a posted picture](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/issues/13)**
 
@@ -143,7 +145,7 @@ Use bullet points like this:
 ~~~~~~~~~~~~~~~-->
 
 ## Additional context
-Add any other context or screenshots about the feature request here.
+To see how comments are linked to pictures in our backend, please consult the [User Account to Backend Integration page](User-Account-To-Backend.md).
 
 **[User Story 3: Follow other users](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/issues/15)** 
 
@@ -207,7 +209,7 @@ Use bullet points like this:
 ~~~~~~~~~~~~~~~-->
 
 ## Additional context
-Add any other context or screenshots about the feature request here.
+Part of the Backend Integration of Notifications is outlined in the [User Account to Backend Integration page](User-Account-To-Backend.md).
 
 **[User Story 4 (Additional Feature): ShutterFeed Stories](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/issues/24)**
 
