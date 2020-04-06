@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/core/auth.service';
 import { Observable } from 'rxjs';
 import { v4 as getUuid } from 'uuid';
 import { AngularFireFunctions } from '@angular/fire/functions';
-import { Timestamp } from '@google-cloud/firestore';
+//import { Timestamp } from '@google-cloud/firestore';
 
 @Component({
   selector: 'app-new-story-dialog',

@@ -1,7 +1,7 @@
 /* Margin so the nav-bar doesn't overlap with content*/
 :host {
   display: block;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .nav-bar {
@@ -36,4 +36,13 @@
       margin: 0 10px 0 auto;
     }
   }
+}
+
+.tool-bar{
+  margin-bottom: 50px;
+}
+example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
 }

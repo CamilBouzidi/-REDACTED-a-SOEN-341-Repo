@@ -1,0 +1,17 @@
+.story-card {
+    max-width: 600px;
+    margin: 0 auto 15px;
+  
+    @media (min-width: 768px) {
+      margin-bottom: 60px;
+    }
+  }
+  
+  .header {
+    position: relative;
+  
+    .follow-button {
+      position: absolute;
+      right: 0;
+    }
+  }

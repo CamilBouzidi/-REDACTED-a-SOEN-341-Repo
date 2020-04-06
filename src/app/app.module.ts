@@ -20,6 +20,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 /* Other imports */
 import { AppComponent } from './app.component';
@@ -58,7 +60,7 @@ import { NewStoryDialogComponent } from './story-container/new-story-dialog/new-
     FollowButtonComponent,
     NotificationsComponent,
     StoryContainerComponent,
-    NewStoryDialogComponent,
+    NewStoryDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +87,8 @@ import { NewStoryDialogComponent } from './story-container/new-story-dialog/new-
     MatCardModule,
     MatProgressSpinnerModule,
     MatMenuModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
