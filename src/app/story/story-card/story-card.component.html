@@ -6,9 +6,8 @@
     <mat-card-subtitle>{{data.user.email}}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image [src]="imageUrl | async" alt="Image with caption: '{{ data.caption }}'">
-  <mat-card-content>
-    <p>
-      {{data.caption}}
-    </p>
-  </mat-card-content>
+  <p *ngIf="!isExpired; else expired">This is not expired picture! Its cutoff date is {{data.cutoff}}</p>
+  <ng-template #expired>
+    <p>This is an expired picture! Its cuttoff date is {{data.cutoff}}</p>
+  </ng-template>
 </mat-card>

@@ -4,7 +4,6 @@ import * as functions from 'firebase-functions';
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 import * as admin from 'firebase-admin';
 admin.initializeApp();
-admin.firestore().collection('stories').orderBy("cutoff");
 
 
 /**
@@ -130,14 +129,18 @@ export const newStory = functions.https.onCall(async (data, context) => {
 
   // Get user info from firestone
   const user = await getUserInfo(context.auth.uid);
+  let uploadDate : Date = new Date();
+  let cutoffDate : Date = new Date(uploadDate);
+  cutoffDate.setHours(cutoffDate.getHours()+data.expiryTime);
+
 
   // Create story object
   const story = {
     imageUrl: `storiesImages/${data.uuid}`,
     duration: data.duration,
     expiryTime: data.expiryTime,
-    uploadTime: data.uploadTime,
-    cutoff: data.cutoff,
+    uploadTime: uploadDate,
+    cutoffDate: cutoffDate,
     user
   }
 
