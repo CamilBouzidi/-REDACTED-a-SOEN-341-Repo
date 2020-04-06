@@ -1,6 +1,13 @@
 .story-card {
     max-width: 600px;
     margin: 0 auto 15px;
+
+    
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align:top;
+    
   
     @media (min-width: 768px) {
       margin-bottom: 60px;
@@ -15,3 +22,14 @@
       right: 0;
     }
   }
+
+  // .scrolling-wrapper{
+  //   overflow-x: scroll;
+  //   overflow-y: hidden;
+  //   white-space: nowrap;
+  
+  //   // .card{
+  //   //   display: inline-block;
+  //   // }
+  
+  // }

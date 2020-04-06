@@ -43,6 +43,8 @@ import { FollowButtonComponent } from './follow-button/follow-button.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { StoryContainerComponent } from './story-container/story-container.component';
 import { NewStoryDialogComponent } from './story-container/new-story-dialog/new-story-dialog.component';
+import { StoryComponent } from './story/story.component';
+import { StoryCardComponent } from './story/story-card/story-card.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { NewStoryDialogComponent } from './story-container/new-story-dialog/new-
     FollowButtonComponent,
     NotificationsComponent,
     StoryContainerComponent,
-    NewStoryDialogComponent
+    NewStoryDialogComponent,
+    StoryComponent,
+    StoryCardComponent
   ],
   imports: [
     BrowserModule,

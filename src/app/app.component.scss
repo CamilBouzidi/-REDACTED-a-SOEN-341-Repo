@@ -41,8 +41,18 @@
 .tool-bar{
   margin-bottom: 50px;
 }
-example-fill-remaining-space {
-  /* This fills the remaining space, by using flexbox. 
-     Every toolbar row uses a flexbox row layout. */
-  flex: 1 1 auto;
+// example-fill-remaining-space {
+//   /* This fills the remaining space, by using flexbox. 
+//      Every toolbar row uses a flexbox row layout. */
+//   flex: 1 1 auto;
+// }
+
+.scrolling-wrapper{
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  // .card{
+  //   display: inline-block;
+  // }
+
 }
