@@ -129,9 +129,10 @@ export const newStory = functions.https.onCall(async (data, context) => {
 
   // Get user info from firestone
   const user = await getUserInfo(context.auth.uid);
-  let uploadDate : Date = new Date();
-  let cutoffDate : Date = new Date(uploadDate);
+  const uploadDate: Date = new Date();
+  let cutoffDate: Date = new Date(uploadDate);
   cutoffDate.setHours(cutoffDate.getHours()+data.expiryTime);
+
 
 
   // Create story object
@@ -139,8 +140,8 @@ export const newStory = functions.https.onCall(async (data, context) => {
     imageUrl: `storiesImages/${data.uuid}`,
     duration: data.duration,
     expiryTime: data.expiryTime,
-    uploadTime: uploadDate,
-    cutoffDate: cutoffDate,
+    uploadTime: uploadDate.getTime(),
+    cutoffTime: cutoffDate.getTime(),
     user
   }
 

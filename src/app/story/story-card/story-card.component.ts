@@ -17,8 +17,8 @@ export class StoryCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.imageUrl = this.storage.ref(this.data.imageUrl).getDownloadURL();
-    const current = new Date();
-    if (current > (this.data.cutoffDate)){
+    const current = new Date().getTime();
+    if (current > (this.data.cutoffTime)){
       this.isExpired = true;
     } else {
       this.isExpired = false;
