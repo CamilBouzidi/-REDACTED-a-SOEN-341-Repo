@@ -39,6 +39,7 @@ import { FeedCardComponent } from './feed/feed-card/feed-card.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
 import { FollowButtonComponent } from './follow-button/follow-button.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { UsernameGeneratorComponent } from './username-generator/username-generator.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     LoginButtonComponent,
     FollowButtonComponent,
     NotificationsComponent,
+    UsernameGeneratorComponent,
   ],
   imports: [
     BrowserModule,

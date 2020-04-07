@@ -4,10 +4,12 @@ import { Router } from '@angular/router';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
+import { User } from 'firebase';
 
 import { Observable, of } from 'rxjs';
 import { switchMap} from 'rxjs/operators';
 import { FirebaseUser } from './user.model';
+import {userError} from '@angular/compiler-cli/src/transformers/util';
 
 @Injectable({
   providedIn: 'root'
@@ -57,4 +59,12 @@ export class AuthService {
 
     return userRef.set(data, { merge: true});
   }
+
+  private modifyDisplayName(targetUser, username) {
+    // Casting Target User into User
+    const user: User = targetUser as User;
+
+    //
+  }
+
 }
