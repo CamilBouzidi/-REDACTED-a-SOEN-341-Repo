@@ -216,7 +216,7 @@ Part of the Backend Integration of Notifications is outlined in the [User Accoun
 
 | User Story        | P | SP |
 |:-----------------------|:-:|:--:|
-| ShutterFeed Stories  | 8 | 8 |
+| ShutterFeed Stories  | High | 9 |
 
 <!-- Write a Description Below -->
 
