@@ -13,3 +13,11 @@ Here are a few guides to help you understand the project a little better:
 * [Unit Testing](Unit-Testing)
 
 * [Material UI Guide](Material-UI-Guide)
+
+Shortly put, here is how the back-end works:
+
+![A diagram of our backend.](../images/architecture.png)
+
+Through cloud functions, we can pass data collected from the front-end into the backend's storage and database (called the Firestore).
+In the storage, pictures are stored with a link. 
+In the database, a document structure is used to hold all of the information about a post. A link to the picture is saved, but also the person who posted the picture, as well as the caption and attached comments. 
