@@ -21,8 +21,8 @@ export class NewStoryDialogComponent {
   expiryTime: number;
   user: Observable<any>;
   newStory: any;
-  uploadTime: number;
-  cutoffTime: Date;
+  uploadTimestamp: number;
+  cutoffTimestamp: number;
   uploading = false;
 
   constructor(
@@ -52,13 +52,13 @@ export class NewStoryDialogComponent {
   uploadImage = (): void => {
     this.uploading = true;
     const uploadDate: Date = new Date();
-    this.uploadTime = uploadDate.getTime();
+    this.uploadTimestamp = uploadDate.getTime();
     let cutoffDate: Date = new Date(uploadDate);
     const uuid = getUuid();
     if (this.duration > 30 || this.duration < 1 || isNaN(this.duration)){
       this.duration = 30;
     }
-    if (this.expiryTime > 48 /*|| this.expiryTime < 1*/ || isNaN(this.expiryTime)){
+    if (this.expiryTime > 48 || this.expiryTime < 1 || isNaN(this.expiryTime)){
       this.expiryTime = 48;
     }
     cutoffDate.setHours(cutoffDate.getHours()+this.expiryTime);
@@ -66,8 +66,8 @@ export class NewStoryDialogComponent {
       uuid,
       duration: this.duration || 10,
       expiryTime: this.expiryTime || 48,
-      uploadTime: this.uploadTime,
-      cutoffTime: cutoffDate.getTime()
+      cutoffTimestamp: this.cutoffTimestamp,
+      uploadTimestamp: this.uploadTimestamp
     };
 
     /* Uploading the image as a file */

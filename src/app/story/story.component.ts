@@ -14,7 +14,7 @@ export class StoryComponent {
   stories: Observable<any[]>;
 
   constructor(afs: AngularFirestore) {
-    this.stories = afs.collection('stories', ref => ref.orderBy('timestamp', 'desc')).snapshotChanges().pipe(
+    this.stories = afs.collection('stories', ref => ref.orderBy('uploadTimestamp', 'desc')).snapshotChanges().pipe(
       /* This mess of a code allows us to create the story object we desire
       by extracting only the data we want from the original story object that
       we receive, which is the story id and the story data. */
