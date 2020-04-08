@@ -2,7 +2,7 @@ The user stories of our application:
 
 If there are any discrepancies between the documentation and the issues on GitHub, please prioritize the issues on GitHub.
 
-_Click on the User Story's title to see related issue. To see the task breakdown, consult the issues on the GitHub project. Each User Story has a number (1 to 5) with the tasks identified as x.1, x.2, x.3, etc._
+_Click on the User Story's title to see related issue. To see the task breakdown, consult the [issues with "Task" in the title on the GitHub project](https://github.com/laurentlaurent/ShutterFeed-a-soen-341-repo/issues?q=Task+in%3Atitle+sort%3Acreated-asc). Each User Story has a number (1 to 5) with the tasks identified as x.1, x.2, x.3, etc._
 
 **[User Story 1: Upload Pictures](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/issues/8)**
 
