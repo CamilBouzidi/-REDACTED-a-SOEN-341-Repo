@@ -1,7 +1,6 @@
 import {async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DebugElement, ChangeDetectorRef } from '@angular/core';
-import { By } from '@angular/platform-browser';
 
 import { FollowButtonComponent } from './follow-button.component';
 
@@ -28,24 +27,24 @@ describe('FollowButtonComponent', () => {
           return of(user);
         }
       }
-    }
+    };
     
     const AngularFireFunctionsMock = {
       httpsCallable: (fnsName) => {
-        switch(fnsName) {
+        switch (fnsName) {
           case 'follow':
             return () => {
               component.following = true;
               return of(true);
-            }
-          case 'unfollow': 
+            };
+          case 'unfollow':
            return () => {
               component.following = false;
               return of(true);
-            }
+            };
         }
       }
-    }
+    };
 
     TestBed.configureTestingModule({
       declarations: [ FollowButtonComponent ],
@@ -75,17 +74,17 @@ describe('FollowButtonComponent', () => {
 
   it('should begin not following', () => {
     expect(component.following).toBeFalsy();
-  })
+  });
 
   it('should be following after following', () => {
     component.follow();
     expect(component.following).toBeTrue();
-  })
+  });
 
   it('should not be following after unfollowing', () => {
     component.unfollow();
     expect(component.following).toBeFalse();
-  })
+  });
 
 
 });
