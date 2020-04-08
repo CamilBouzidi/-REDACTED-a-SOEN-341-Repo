@@ -8,14 +8,37 @@ This is the repository for ShutterFeed, our SOEN 341 group project.
 
 ## Members
 * [Alexander Robitaille](https://github.com/A-Robitaille)
-* [Camil Bouzidi](https://github.com/CamilBouzidi) (Please Note: Due to a login error, most of Camil's contributions appear as [Ajithmelkote](https://github.com/Ajithmelkote) or hackerrank)
+* **[Camil Bouzidi](https://github.com/CamilBouzidi) (Please Note: Due to a login error, most of Camil's contributions appear as [Ajithmelkote](https://github.com/Ajithmelkote) or hackerrank)**
 * [Judy Mezaber](https://github.com/jmezaber)
 * [Laurent Lao](https://github.com/laurentlaurent/)
 * [Tommy Josépovic](https://github.com/tommy-josepovic)
 
 ## Description
 
-This project is a school assignment for the SOEN 341 class meant to result in a working Instagram-like website. The website allows users to log in and post pictures that they like. Once that picture is uploaded, anyone can comment on it, but you can also follow users to receive updates whenever they post a picture.
+ShutterFeed is an Instagram-like web app designed to let users contribute to a common feed of pictures to share them. Using their Google Account and their chosen username, a user can log in, post pictures, follow other users, comment under pictures, and even post temporary pictures that will disappear after a given time. ShutterFeed promotes collaboration since there is only a single feed, and it is completely secure: if a picture from the user's story is deleted, the ShutterFeed team does not archive it before deleting it.
+
+By having users contribute to a single feed, we are really putting the "social" back in social medium!
+
+## Walkthrough
+
+When they log in for the first time, a user must pick a username.
+
+### Insert Username Screenshot
+
+Once they are logged in, they can see the feed and comment on it!
+![A picture of Camil who commented on Judy's post.](images/comments.png)
+
+If they enjoy a particular user's post, they can be notified when they post something:
+
+![Here, the user is being followed by both Camil and Tommy Josépovich](images/notifications.png)
+
+They can even post a picture and choose a caption:
+
+![A picture of beautiful Wakanda.](images/post.png)
+
+Additionally, a user can choose to upload a ShutterFeed Story. Essentially, a ShutterFeed Story is a picture that will appear separately from the feed, so that they do not compromise the aesthetic of the feed or so that a picture that is meant to be temporary does not stay on the feed forever.
+
+### Insert a photo of the story stuff
 
 ## Core Features
 [Also available as User Stories](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/wiki/User-Stories)
@@ -32,6 +55,16 @@ This project is a school assignment for the SOEN 341 class meant to result in a 
 
 ### Languages
 This project could benefit from having an Angular front-end and a [Firebase](https://firebase.google.com/) back-end to leverage existing work-experience from project members.
+
+#### Style Enforcing
+Since TSLint was used for this project and since it has a multi-purpose default style vetted by many developers, it was used for this project. It includes (but is not limited to):
+
+* Variables: lower camel case
+* Component classes: Upper camel case, must end with Component. 
+* Component selectors: kebab case, must start with app.
+* Component packages: kebab case for folder names. The files in the folder always start with the component's name in kebab case, followed by a .component term and always end with the file extension.
+
+For a list of full rules, please consult our [TS Config File](https://github.com/laurentlaurent/ShutterFeed-a-soen-341-repo/blob/master/tsconfig.json).
 
 ### Techniques
 The project is being hosted on [Firebase](https://firebase.google.com/) platform's. It allows for domain hosting, database design and storage. Moreover, it offers a authentification plug-in that uses Google Accounts.
