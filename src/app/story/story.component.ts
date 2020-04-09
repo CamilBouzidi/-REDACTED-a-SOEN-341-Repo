@@ -12,9 +12,9 @@ import { CookieService } from 'ngx-cookie-service';
   templateUrl: './story.component.html',
   styleUrls: ['./story.component.scss']
 })
-export class StoryComponent {
+export class StoryComponent implements OnInit {
   stories: Observable<any[]>;
-  updateStories : any;
+  updateStories: any;
 
   constructor(afs: AngularFirestore, fns: AngularFireFunctions, private cookieService: CookieService) {
     this.updateStories = fns.httpsCallable('updateStories');
@@ -30,11 +30,11 @@ export class StoryComponent {
     );
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const result = this.cookieService.get('updateStories');
     if (!result) {
       this.updateStories({}).subscribe();
-      this.cookieService.set('updateStories', 'don\'t update', new Date((Date.now() + 3600*1000)));
+      this.cookieService.set('updateStories', 'don\'t update', new Date((Date.now() + 3600 * 1000)));
     }
   }
 }

@@ -28,7 +28,7 @@
       <input type = "number" [(ngModel)]="duration" placeholder="Duration (s)" >
       <input type = "number" [(ngModel)]="expiryTime" placeholder="Expiry Time (h)" >
       <button mat-button mat-dialog-close>Cancel</button>
-      <button mat-raised-button (click)="uploadImage()" [disabled]="!image || uploading" color="primary">Share</button>
+      <button class="send" mat-raised-button (click)="uploadImage()" [disabled]="!image || uploading" color="primary">Share</button>
     </mat-dialog-actions>
   </div>
   
