@@ -51,3 +51,5 @@ describe ('tempComponentName (Minimal Testing)', () => {
 });
 
 ```
+
+The component can be tested using the command ``ng test``.
