@@ -121,3 +121,57 @@ const newNotification = (user: any, type: string) => {
   });
   return;
 }
+
+export const newStory = functions.https.onCall(async (data, context) => {
+  if (!context.auth?.uid) {
+    return; //Do not proceed if the user is not logged in.
+  }
+
+  // Get user info from firestone
+  const user = await getUserInfo(context.auth.uid);
+  const uploadDate: Date = new Date();
+  
+  //Convert dates for story expiration into timestamps. 
+  //const uploadTimestamp: number = new Date().getTime();
+  //let cutoffDate: Date = new Date(uploadTimestamp);
+  //cutoffDate.setHours(cutoffDate.getHours()+data.expiryTime);
+  //const cutoffTimestamp: number = cutoffDate.getTime();
+
+
+
+
+  // Create story object
+  const story = {
+    imageUrl: `storiesImages/${data.uuid}`,
+    duration: data.duration,
+    expiryTime: data.expiryTime,
+    uploadTimestamp: data.uploadTimestamp,
+    cutoffTimestamp: data.cutoffTimestamp,
+    user
+  }
+
+  // Send post to firestone
+  await admin.firestore().collection('stories').add(story)
+  .then(() => {
+    newNotification(user, 'newStory');
+  });
+  return {response: 'Success!'};
+});
+
+export const updateStories = functions.https.onCall(async (data, context) => {
+  const now = Date.now();
+
+  // Retrive all stories from Firebase
+  admin.firestore().collection('stories')
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach(async (doc) => {
+        const data = await doc.data()
+        if (data.cutoffTimestamp < now) {
+          admin.firestore().doc(`stories/${doc.id}`).delete();
+        }
+      });
+    });
+
+  return {response: 'Success!'};
+});

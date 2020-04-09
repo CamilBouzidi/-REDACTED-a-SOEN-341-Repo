@@ -1,0 +1,16 @@
+<ng-template [ngIf]="underDuration" [ngIfElse]="emptyDiv"></ng-template>
+<ng-template #emptyDiv>
+  <mat-card class="story-card">
+    <mat-card-header class="header">
+      <app-follow-button [uid]="data.user.uid" class="follow-button"></app-follow-button>
+      <!-- <img mat-card-avatar class="story-card-header-image" [src]="data.user.photoURL" /> -->
+      <mat-card-title style="font-size: 10px;">{{data.user.displayName}}</mat-card-title>
+    </mat-card-header>
+    <img class="img-responsive image-resize" mat-card-image [src]="imageUrl | async" alt="Image with caption: '{{ data.caption }}'">
+    <mat-card-footer class="footer">
+      <p>
+         Should disapear in {{data.expiryTime}}h
+      </p>
+    </mat-card-footer>
+  </mat-card>
+</ng-template>

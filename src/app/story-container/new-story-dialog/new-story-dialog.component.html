@@ -1,0 +1,34 @@
+<div class="dialog-wrapper" [class.uploading]="uploading">
+  
+    <div class="dialog-overlay"></div>
+  
+    <button class="close-icon" mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  
+    <h2 mat-dialog-title>New Story </h2>
+    <h3>You can upload a story with a duration and expiry time.</h3>
+  
+    <mat-dialog-content>
+      <button *ngIf="!image" class="choose-image-btn" mat-button (click)="imageInput.click()">
+        <mat-icon>insert_photo</mat-icon> Choose image
+      </button>
+      <input #imageInput type="file" accept="image/png, image/jpg, image/jpeg" style="display: none;"
+        (change)="handleImageInput(imageInput)">
+  
+      <div class="image-wrapper" *ngIf="image">
+        <img class="image-preview" [src]="image">
+      </div>
+    </mat-dialog-content>
+  
+    <mat-dialog-actions align="end">
+      <!--<mat-form-field class="duration-field">
+        
+      </mat-form-field>-->
+      <input type = "number" [(ngModel)]="duration" placeholder="Duration (s)" >
+      <input type = "number" [(ngModel)]="expiryTime" placeholder="Expiry Time (h)" >
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button class="send" mat-raised-button (click)="uploadImage()" [disabled]="!image || uploading" color="primary">Share</button>
+    </mat-dialog-actions>
+  </div>
+  

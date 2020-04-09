@@ -2,7 +2,7 @@ The user stories of our application:
 
 If there are any discrepancies between the documentation and the issues on GitHub, please prioritize the issues on GitHub.
 
-_Click on the User Story's title to see related issue. To see the task breakdown, consult the issues on the GitHub project. Each User Story has a number (1 to 5) with the tasks identified as x.1, x.2, x.3, etc._
+_Click on the User Story's title to see related issue. To see the task breakdown, consult the [issues with "Task" in the title on the GitHub project](https://github.com/laurentlaurent/ShutterFeed-a-soen-341-repo/issues?q=Task+in%3Atitle+sort%3Acreated-asc). Each User Story has a number (1 to 5) with the tasks identified as x.1, x.2, x.3, etc._
 
 **[User Story 1: Upload Pictures](https://github.com/CamilBouzidi/-REDACTED-a-SOEN-341-Repo/issues/8)**
 
@@ -22,7 +22,7 @@ As a user, I want to upload pictures on my account in order to share my life wit
 
 The risk for this user story is:
 
-* Using Firebase API, which is a relatively new technology for all of us
+* Using Firebase API, which is a relatively new technology for all of us.
 
 ## Task List
 
@@ -216,12 +216,13 @@ Part of the Backend Integration of Notifications is outlined in the [User Accoun
 
 | User Story        | P | SP |
 |:-----------------------|:-:|:--:|
-| ShutterFeed Stories  | 8 | 8 |
+| ShutterFeed Stories  | High | 9 |
 
 <!-- Write a Description Below -->
 
 As a user, I would like to be able to upload pictures that would disappear after a day, separately from my main feed of pictures (say, in my Story). That way, I would still be able to update my followers on my day-to-day life without compromising the aesthetic or themes of my feed.
 
+Additionally, a user can choose to upload a ShutterFeed Story. Essentially, a ShutterFeed Story is a picture that will appear separately from the feed, so that they do not compromise the aesthetic of the feed or so that a picture that is meant to be temporary does not stay on the feed forever.
 <!-- Don't write anything near the line -->
 ------------------------------------------
 
@@ -235,7 +236,7 @@ The fact that this user story deals with time (making the picture disappear afte
 - [x] Assign Story Point Value
 - [x] Assign Priority Number
 - [x] Define tasks
-- [ ] Verify issue completion with Acceptance Test. Done!
+- [x] Verify issue completion with Acceptance Test. Done!
 
 
 ------------------------------------------
@@ -287,7 +288,7 @@ As a user, I would like to pick out a username so that my real name is not alway
 - [x] Assign Story Point Value
 - [x] Assign Priority Number
 - [x] Define tasks
-- [ ] Verify issue completion with Acceptance Test. Done!
+- [] Verify issue completion with Acceptance Test. Done!
 
 <!-- 
 Enter some tasks above
