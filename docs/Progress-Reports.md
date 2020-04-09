@@ -2,6 +2,7 @@
 
 <!-- Progress Reports details -->
 <!-- Should be ordered from most recent to oldest -->
+This progress report page is outdated. Please refer to the [Meeting Minutes](Meeting-Minuted.md).
 
 ## Feb 9 2020
 
