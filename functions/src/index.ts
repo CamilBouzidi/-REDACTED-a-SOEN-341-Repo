@@ -151,3 +151,21 @@ export const newStory = functions.https.onCall(async (data, context) => {
   });
   return {response: 'Success!'};
 });
+
+export const updateStories = functions.https.onCall(async (data, context) => {
+  const now = Date.now();
+
+  // Retrive all stories from Firebase
+  admin.firestore().collection('stories')
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach(async (doc) => {
+        const data = await doc.data()
+        if (data.cutoffTimestamp < now) {
+          admin.firestore().doc(`stories/${doc.id}`).delete();
+        }
+      });
+    });
+
+  return {response: 'Success!'};
+});
