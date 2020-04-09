@@ -18,7 +18,7 @@ export class StoryComponent implements OnInit {
 
   constructor(afs: AngularFirestore, fns: AngularFireFunctions, private cookieService: CookieService) {
     this.updateStories = fns.httpsCallable('updateStories');
-    this.stories = afs.collection('stories', ref => ref.orderBy('timestamp', 'desc')).snapshotChanges().pipe(
+    this.stories = afs.collection('stories', ref => ref.orderBy('uploadTimestamp', 'desc')).snapshotChanges().pipe(
       /* This mess of a code allows us to create the story object we desire
       by extracting only the data we want from the original story object that
       we receive, which is the story id and the story data. */
