@@ -18,6 +18,7 @@ export class UserProfileComponent {
     this.afs.collection('users').doc(uid).update({
       username: this.usernameInput
     });
+    this.usernameInput = '';
   }
 }
 
