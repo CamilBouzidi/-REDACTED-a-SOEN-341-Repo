@@ -1,0 +1,6 @@
+<div>
+    <p>ShutterFeed Stories: See them while they're here!</p>
+</div>
+<div class="story" style="height: fit-content;" *ngFor="let story of stories | async">
+    <app-story-card [data]="story"></app-story-card>
+</div>

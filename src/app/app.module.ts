@@ -20,6 +20,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 /* Other imports */
 import { AppComponent } from './app.component';
@@ -39,6 +41,11 @@ import { FeedCardComponent } from './feed/feed-card/feed-card.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
 import { FollowButtonComponent } from './follow-button/follow-button.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { StoryContainerComponent } from './story-container/story-container.component';
+import { NewStoryDialogComponent } from './story-container/new-story-dialog/new-story-dialog.component';
+import { StoryComponent } from './story/story.component';
+import { StoryCardComponent } from './story/story-card/story-card.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -55,6 +62,10 @@ import { NotificationsComponent } from './notifications/notifications.component'
     LoginButtonComponent,
     FollowButtonComponent,
     NotificationsComponent,
+    StoryContainerComponent,
+    NewStoryDialogComponent,
+    StoryComponent,
+    StoryCardComponent
   ],
   imports: [
     BrowserModule,
@@ -81,9 +92,10 @@ import { NotificationsComponent } from './notifications/notifications.component'
     MatCardModule,
     MatProgressSpinnerModule,
     MatMenuModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatToolbarModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
