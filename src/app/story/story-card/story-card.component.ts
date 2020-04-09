@@ -11,11 +11,18 @@ import { Observable } from 'rxjs';
 export class StoryCardComponent implements OnInit {
   @Input() data: any;
   imageUrl: Observable<string>;
+  underDuration: boolean = false;
 
   constructor(private storage: AngularFireStorage) { }
 
   ngOnInit(): void {
     this.imageUrl = this.storage.ref(this.data.imageUrl).getDownloadURL();
+
+
+    setTimeout(() => {
+      this.underDuration = true;
+        }, (this.data.duration * 1000));
+    
   }
 
 }

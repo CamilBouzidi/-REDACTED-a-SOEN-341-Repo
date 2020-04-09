@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   templateUrl: './story-container.component.html',
   styleUrls: ['./story-container.component.scss']
 })
-export class StoryContainerComponent{
+export class StoryContainerComponent {
   user: Observable<any>;
   constructor(private dialog: MatDialog, public auth: AuthService) {
     this.getUser();

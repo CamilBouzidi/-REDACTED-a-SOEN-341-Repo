@@ -1,23 +1,23 @@
 .story-card {
-    max-width: 600px;
+    max-width: 200px;
     margin: 0 auto 15px;
-
-    // display: none;
-
+    font-size: small;
+   
     @media (min-width: 768px) {
       margin-bottom: 60px;
     }
   }
 
   .image-resize{
-    height: 600px;
-    width: 600px;
+    height: 200px;
+    width: 200px;
     object-fit: cover;
     object-position: center center;
   }
   
   .header {
     position: relative;
+    font-size: small;
   
     .follow-button {
       position: absolute;

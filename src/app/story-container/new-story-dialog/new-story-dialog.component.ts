@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/core/auth.service';
 import { Observable } from 'rxjs';
 import { v4 as getUuid } from 'uuid';
 import { AngularFireFunctions } from '@angular/fire/functions';
-//import { Timestamp } from '@google-cloud/firestore';
+// import { Timestamp } from '@google-cloud/firestore';
 
 @Component({
   selector: 'app-new-story-dialog',
@@ -31,7 +31,7 @@ export class NewStoryDialogComponent {
     private fns: AngularFireFunctions,
     private snackBar: MatSnackBar,
     private auth: AuthService
-  ) { 
+  ) {
     this.auth.user$.subscribe(user => this.user = user);
     this.newStory = this.fns.httpsCallable('newStory');
   }
@@ -53,15 +53,15 @@ export class NewStoryDialogComponent {
     this.uploading = true;
     const uploadDate: Date = new Date();
     this.uploadTimestamp = uploadDate.getTime();
-    let cutoffDate: Date = new Date(uploadDate);
+    const cutoffDate: Date = new Date(uploadDate);
     const uuid = getUuid();
-    if (this.duration > 30 || this.duration < 1 || isNaN(this.duration)){
+    if (this.duration > 30 || this.duration < 1 || isNaN(this.duration)) {
       this.duration = 30;
     }
-    if (this.expiryTime > 48 || this.expiryTime < 1 || isNaN(this.expiryTime)){
+    if (this.expiryTime > 48 || this.expiryTime < 1 || isNaN(this.expiryTime)) {
       this.expiryTime = 48;
     }
-    cutoffDate.setHours(cutoffDate.getHours()+this.expiryTime);
+    cutoffDate.setHours(cutoffDate.getHours() + this.expiryTime);
     const data = {
       uuid,
       duration: this.duration || 10,
