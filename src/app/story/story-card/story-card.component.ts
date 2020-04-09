@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class StoryCardComponent implements OnInit {
   @Input() data: any;
   imageUrl: Observable<string>;
-  underDuration: boolean = false;
+  underDuration = false;
 
   constructor(private storage: AngularFireStorage) { }
 
