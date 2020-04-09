@@ -80,7 +80,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     MatSnackBarModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatMenuModule
+    MatMenuModule,
     MatProgressSpinnerModule
   ],
   providers: [],
