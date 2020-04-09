@@ -45,6 +45,7 @@ import { StoryContainerComponent } from './story-container/story-container.compo
 import { NewStoryDialogComponent } from './story-container/new-story-dialog/new-story-dialog.component';
 import { StoryComponent } from './story/story.component';
 import { StoryCardComponent } from './story/story-card/story-card.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,7 @@ import { StoryCardComponent } from './story/story-card/story-card.component';
     MatProgressSpinnerModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
