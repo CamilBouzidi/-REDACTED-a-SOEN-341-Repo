@@ -7,12 +7,12 @@
 
     <div class="notification" *ngIf="notification.type === 'newPost'" #newPost>
       <img class="user-photo" src="{{notification.user.photoURL}}">
-      <p class="notification-text"><strong>{{notification.user.displayName}}</strong> uploaded a new picture!</p>
+      <p class="notification-text"><strong>{{user.username != null ? user.username : user.displayName}}</strong> uploaded a new picture!</p>
     </div>
     
     <div class="notification" *ngIf="notification.type === 'newFollower'" #newFollower>
       <img class="user-photo" src="{{notification.user.photoURL}}">
-      <p class="notification-text"><strong>{{notification.user.displayName}}</strong> started following you!</p>
+      <p class="notification-text"><strong>{{user.username != null ? user.username : user.displayName}}</strong> started following you!</p>
       <app-follow-button [uid]="notification.user.uid" class="follow-button"></app-follow-button>
     </div>
 

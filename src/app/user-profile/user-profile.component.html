@@ -25,6 +25,10 @@ automatically subscribe to the Observable and unsubscribe when the component is 
     <h3>Howdy, {{ user.displayName }}</h3>
     <img alt="User Display Picture" [src]="user.photoURL">
     <p>UID: {{ user.uid }}</p>
+    <p>Current username: {{user.username != null ? user.username : user.displayName}}</p>
+    <label for="usernameInput">Set username </label>
+    <input type="text" id="usernameInput" name="usernameInput" placeholder="Enter new username" [(ngModel)]="usernameInput">
+    <button (click)="this.setUsername(user.uid)">Update</button>
     <p>Favorite Color: {{ user?.myCustomData }} </p>
     <button (click)="auth.signOut()">Logout</button>
   </div>
